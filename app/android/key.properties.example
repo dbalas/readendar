@@ -1,0 +1,20 @@
+# Copy to `key.properties` (git-ignored) and fill in with your real values.
+#
+# Generate the upload keystore ONCE, then back it up somewhere you cannot lose
+# it (password manager + offline copy). Google Play App Signing means the app
+# signing key is held by Google, but if you lose THIS upload key you must ask
+# Play support to reset it before you can ship another update.
+#
+#   keytool -genkey -v \
+#     -keystore ~/readendar-upload-keystore.jks \
+#     -keyalg RSA -keysize 2048 -validity 10000 \
+#     -alias upload
+#
+# Keep the keystore OUTSIDE the repo (e.g. ~/), and point storeFile at it with
+# an absolute path. android/app/build.gradle.kts falls back to the debug key
+# when this file is absent, so local `flutter build` still works without it.
+
+storePassword=<the keystore password you chose>
+keyPassword=<the key password you chose>
+keyAlias=upload
+storeFile=/absolute/path/to/readendar-upload-keystore.jks

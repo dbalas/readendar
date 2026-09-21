@@ -1,0 +1,45 @@
+<!--
+  Adaptive-icon foreground layer (Android 8+). Transparent background: the
+  solid brand fill lives in @color/ic_launcher_background, so the launcher can
+  parallax / mask the two layers independently.
+
+  Canvas is the full 108dp adaptive square; launchers only ever show the inner
+  72dp viewport and may crop as far as a 66dp circle. The glyph is centred and
+  scaled to ~55% of that viewport, which (a) keeps its bounding diagonal well
+  inside the safe circle under every mask, and (b) matches the optical weight of
+  the iOS app icon, where the mark occupies ~43% of an uncropped square. Scaling
+  it to fill the viewport looks correct in isolation but reads noticeably
+  chunkier than iOS side by side.
+
+  The glyph geometry is copied from app-icon.svg — keep the two in sync if the
+  mark changes, update the matching Android mipmap PNGs under
+  `app/android/app/src/main/res/`. The transform
+  is (1024 - 64*7.5)/2 = 272 horizontally, and 512 - 33*7.5 = 264.5 vertically
+  (33 is the glyph's vertical centre in its own 64-unit box, which is not 32
+  because the date-tab lines poke above the calendar body).
+
+  Use `rsvg-convert` (not ImageMagick's built-in MSVG renderer): the latter
+  silently drops the `fill="none"` + `stroke` calendar outline.
+
+  Build-time design source — it lives in `design/`, not `app/assets/`, because
+  `pubspec.yaml` globs `assets/icons/` and would bundle it into every AAB/IPA.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Readendar app icon foreground">
+  <g transform="translate(272 264.5) scale(7.5)">
+    <g fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="10" y="14" width="44" height="42" rx="5"></rect>
+      <line x1="22" y1="10" x2="22" y2="18"></line>
+      <line x1="42" y1="10" x2="42" y2="18"></line>
+      <line x1="10" y1="26" x2="54" y2="26"></line>
+    </g>
+    <g fill="#FFFFFF">
+      <rect x="15.5" y="35" width="4" height="4" rx="0.6"></rect>
+      <rect x="23.5" y="35" width="4" height="4" rx="0.6"></rect>
+      <rect x="31.5" y="35" width="4" height="4" rx="0.6"></rect>
+      <rect x="15.5" y="43" width="4" height="4" rx="0.6"></rect>
+      <rect x="23.5" y="43" width="4" height="4" rx="0.6"></rect>
+      <rect x="31.5" y="43" width="4" height="4" rx="0.6"></rect>
+    </g>
+    <path d="M 39 26 H 49 V 52 L 44 47 L 39 52 Z" fill="#FFFFFF"></path>
+  </g>
+</svg>

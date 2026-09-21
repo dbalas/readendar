@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Stripped-down small widget layout for narrow cells (< SMALL_WIDTH_THRESHOLD_DP,
+     see ReadendarWidgetProvider): a "READENDAR" wordmark, then the day label +
+     title, no cover art, no progress bar, no subtitle — there isn't room to
+     render them legibly. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wdg_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center_vertical"
+    android:background="?android:attr/colorBackground">
+
+    <TextView
+        android:id="@+id/wdg_brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="READENDAR"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="8sp"
+        android:letterSpacing="0.12"
+        android:alpha="0.7"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/wdg_event_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#7479D6"
+        android:textStyle="bold"
+        android:textSize="11sp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/wdg_event_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:text="" />
+</LinearLayout>

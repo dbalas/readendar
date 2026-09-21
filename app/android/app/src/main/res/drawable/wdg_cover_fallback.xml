@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Placeholder behind a book cover when no artwork is available: a soft
+     periwinkle chip matching the app's BookCover fallback. The initial letter
+     is drawn by the TextView on top. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#FF7479D6" />
+    <corners android:radius="4dp" />
+</shape>

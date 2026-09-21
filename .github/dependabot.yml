@@ -1,0 +1,16 @@
+version: 2
+updates:
+  # Keep the SHA-pinned GitHub Actions current (Dependabot bumps the digest and
+  # updates the trailing "# vX" comment).
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]
+
+  - package-ecosystem: pub
+    directory: "/app"
+    schedule:
+      interval: weekly

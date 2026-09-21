@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One event row in the widget's scrollable list. Mirrors the app's
+     EventCardCompact: a complete-toggle + book cover + title/progress on the
+     left, and the event type (icon + label) with a time/relative-day subtitle
+     on the right. The rounded card lives on an INNER view with the outer root
+     kept transparent + padded, so the card's top/bottom border is never clipped
+     by the ListView item bounds. Colors + the type-icon tint are applied at
+     runtime by buildEventRow so the row follows the effective theme. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wdg_row_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <LinearLayout
+        android:id="@+id/wdg_row_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@drawable/wdg_row_bg_light">
+
+        <!-- Complete/uncomplete toggle (its own fill-in intent). The box is a
+             large 44dp touch target (Android's min); the padding keeps the
+             glyph at ~28dp — the click region is the view bounds, so a small
+             icon here made it easy to miss and hit the row's "open" intent
+             instead of completing it. -->
+        <ImageView
+            android:id="@+id/wdg_row_check"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="2dp"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/wdg_ic_check_circle"
+            android:contentDescription="@null" />
+
+        <!-- Book cover (or a periwinkle fallback chip with the title initial). -->
+        <FrameLayout
+            android:id="@+id/wdg_row_cover_wrap"
+            android:layout_width="34dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/wdg_row_cover_fallback"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/wdg_cover_fallback"
+                android:gravity="center"
+                android:textColor="#FFFFFFFF"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/wdg_row_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="@null"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- Book title + progress/milestone. -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/wdg_row_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#FF1A1A1A"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/wdg_row_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#FF5C5C5C"
+                android:textSize="11sp"
+                android:text="" />
+        </LinearLayout>
+
+        <!-- Event type (icon + label) + time/relative-day subtitle, right-aligned. -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical"
+            android:gravity="end">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/wdg_row_type_icon"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:id="@+id/wdg_row_type_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="#FF1A1A1A"
+                    android:textSize="11sp"
+                    android:text="" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/wdg_row_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#FF7479D6"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:text="" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

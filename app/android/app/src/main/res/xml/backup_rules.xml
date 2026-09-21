@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Auto Backup exclusions for API <= 30 (data_extraction_rules.xml covers 31+).
+     After a local import, SQLite (readendar_local.sqlite) and covers/ in app
+     support storage are eligible for backup: they are not listed here.
+     HomeWidgetPreferences stays excluded because it can still hold widget-session
+     JWTs on the API plane (snapshots share that file). FlutterSecureStorage
+     stays excluded. Keep the two exclusion sets identical. -->
+<full-backup-content>
+    <exclude domain="sharedpref" path="HomeWidgetPreferences.xml"/>
+    <exclude domain="sharedpref" path="FlutterSecureStorage.xml"/>
+    <exclude domain="sharedpref" path="FlutterSecureKeyStorage.xml"/>
+    <exclude domain="file" path="import_checkpoint.json"/>
+</full-backup-content>

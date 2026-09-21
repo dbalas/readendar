@@ -1,0 +1,404 @@
+/* ============================================================
+   Readendar — Color & Type Tokens (v2)
+   ============================================================
+   v3 — Periwinkle primary
+   ============================================================
+   - Periwinkle (pastel) as primary
+   - Warm papyrus canvas + pure white surfaces for crisp contrast
+   - Night mode in deep cool ink, lighter periwinkle accent
+   - Amber kept as warm spark for marginalia / highlights
+   ============================================================ */
+
+/* ---------- Fonts ------------------------------------------- */
+@font-face {
+  font-family: "Newsreader";
+  src: url("fonts/Newsreader-Variable.woff2") format("woff2-variations");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("fonts/DMSans-Variable.woff2") format("woff2-variations");
+  font-weight: 100 1000; font-style: normal; font-display: swap;
+}
+
+/* Italic/mono faces were declared against files that do not exist in
+   design/fonts (DMSans-Italic-Variable.woff2, JetBrainsMono-Variable.woff2).
+   Browsers synthesize italic from DM Sans; mono falls back to the system stack. */
+
+/* ============================================================
+   BASE TOKENS
+   ============================================================ */
+:root {
+  /* ---------- Brand: Periwinkle (primary — pastel) ------- */
+  --periwinkle-50:  #F1F2FA;
+  --periwinkle-100: #E2E4F4;
+  --periwinkle-200: #C5C9EA;
+  --periwinkle-300: #A8ADDD;
+  --periwinkle-400: #8E94D3;
+  --periwinkle-500: #7479D6;   /* primary — soft periwinkle */
+  --periwinkle-600: #5A5FBC;
+  --periwinkle-700: #44489A;
+  --periwinkle-800: #2F3373;
+  --periwinkle-900: #1B1E48;
+
+  /* ---------- Brand: Teal (secondary) ---------------------- */
+  --teal-50:  #E8F5F1;
+  --teal-100: #C9E9E0;
+  --teal-200: #97D6C8;
+  --teal-300: #64BCAC;
+  --teal-400: #3FA694;
+  --teal-500: #2A8F7D;
+  --teal-600: #1F7666;
+  --teal-700: #18594E;
+  --teal-800: #103D35;
+  --teal-900: #082420;
+
+  /* ---------- Support: Sage (success) ---------------------- */
+  --sage-50:  #EEF5EB;
+  --sage-100: #D6E6CF;
+  --sage-200: #ADCDA0;
+  --sage-300: #82B373;
+  --sage-400: #6BA15D;
+  --sage-500: #5B924C;
+  --sage-600: #487539;
+  --sage-700: #36572B;
+  --sage-800: #243A1D;
+  --sage-900: #131F10;
+
+  /* ---------- Support: Amber (highlight, warm spark) ------- */
+  --amber-50:  #FCF2DE;
+  --amber-100: #F7E2B5;
+  --amber-200: #F1CB83;
+  --amber-300: #EBB35A;
+  --amber-400: #E5A848;
+  --amber-500: #E0A03A;
+  --amber-600: #B97D26;
+  --amber-700: #8E5E18;
+  --amber-800: #644111;
+  --amber-900: #3F2809;
+
+  /* ---------- Support: Wine (destructive) ------------------ */
+  --wine-50:  #FBE9EB;
+  --wine-100: #F4C8CD;
+  --wine-200: #E5969B;
+  --wine-300: #D26669;
+  --wine-400: #C04F54;
+  --wine-500: #B23F45;
+  --wine-600: #8F2F35;
+  --wine-700: #6B2125;
+  --wine-800: #471417;
+  --wine-900: #28090B;
+
+  /* ---------- Annotation categories (unique; unused elsewhere) - */
+  --ann-note:     #C85A42;   /* coral */
+  --ann-quote:    #2F7FB0;   /* cerulean */
+  --ann-theory:   #9A5FAF;   /* orchid */
+  --ann-question: #C45B8A;   /* rose */
+
+  /* ---------- Paper / Ink (warm neutrals) ------------------ */
+  --paper-50:     #FFFFFF;   /* dominant surface — pure white */
+  --paper-100:    #F7F7F5;   /* nested card */
+  --paper-200:    #EFEFEC;   /* deeper surface */
+  --paper-300:    #E5E5E0;   /* hairlines */
+  --paper-400:    #C9C9C2;
+  --paper-500:    #A3A39C;
+  --paper-600:    #7A7A74;
+  --paper-700:    #525250;
+  --paper-800:    #2E2E2D;
+  --paper-900:    #18181A;
+  --paper-canvas: #FAF5EF;   /* light scaffold — warm papyrus */
+
+  --ink-50:  #FAFAF9;
+  --ink-100: #EDEDEB;
+  --ink-200: #C7C7C2;
+  --ink-300: #8E8E8A;
+  --ink-400: #5E5E5B;
+  --ink-500: #404040;
+  --ink-600: #2A2A2A;
+  --ink-700: #1F1F1F;
+  --ink-800: #161617;
+  --ink-900: #0F1014;     /* primary text — cool near-black */
+
+  --white-100: #FFFFFF;
+
+  /* ============================================================
+     TYPE PRIMITIVES
+     ============================================================ */
+  --font-display: "Newsreader", "Iowan Old Style", "Apple Garamond", Georgia, serif;
+  --font-ui:      "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+  --font-mono:    "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+
+  --fs-xs:   12px;
+  --fs-sm:   13px;
+  --fs-base: 15px;
+  --fs-md:   17px;
+  --fs-lg:   20px;
+  --fs-xl:   24px;
+  --fs-2xl:  32px;
+  --fs-3xl:  44px;
+  --fs-4xl:  60px;
+  --fs-5xl:  84px;
+
+  --lh-tight:  1.1;
+  --lh-snug:   1.25;
+  --lh-normal: 1.45;
+  --lh-relaxed:1.6;
+
+  --tracking-tight:  -0.02em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.04em;
+  --tracking-caps:    0.08em;
+
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semi:    600;
+  --fw-bold:    700;
+
+  /* ============================================================
+     SPACING (4-pt grid) — unchanged
+     ============================================================ */
+  --space-0:  0px;
+  --space-1:  2px;
+  --space-2:  4px;
+  --space-3:  8px;
+  --space-4:  12px;
+  --space-5:  16px;
+  --space-6:  20px;
+  --space-7:  24px;
+  --space-8:  32px;
+  --space-9:  40px;
+  --space-10: 56px;
+  --space-11: 72px;
+  --space-12: 96px;
+
+  /* ============================================================
+     RADII — unchanged
+     ============================================================ */
+  --radius-xs:   4px;
+  --radius-sm:   8px;
+  --radius-card: 12px;
+  --radius-lg:   16px;
+  --radius-sheet:20px;
+  --radius-pill: 999px;
+
+  /* ============================================================
+     ELEVATION — cooled (slate-tinted shadows, not warm)
+     ============================================================ */
+  --shadow-flat:     none;
+  --shadow-raised:   0 1px 0 rgba(15, 16, 20, 0.04),
+                     0 2px 6px -2px rgba(15, 16, 20, 0.08);
+  --shadow-floating: 0 1px 0 rgba(15, 16, 20, 0.04),
+                     0 10px 28px -10px rgba(15, 16, 20, 0.18);
+  --shadow-press:    inset 0 1px 0 rgba(15, 16, 20, 0.06);
+
+  --focus-ring: 0 0 0 2px var(--paper-50),
+                0 0 0 4px var(--periwinkle-500),
+                0 0 0 8px rgba(116, 121, 214, 0.25);
+
+  /* ============================================================
+     MOTION — unchanged
+     ============================================================ */
+  --ease-page:    cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-emph:    cubic-bezier(0.2, 0, 0, 1);
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-quick:    120ms;
+  --dur-state:    180ms;
+  --dur-sheet:    280ms;
+  --dur-celebrate:420ms;
+  --dur-pageturn: 600ms;
+
+  /* ============================================================
+     SEMANTIC TOKENS (light theme — warm papyrus canvas)
+     ============================================================ */
+  --fg-1:        var(--ink-900);
+  --fg-2:        var(--ink-500);
+  --fg-3:        var(--ink-400);
+  --fg-disabled: rgba(15, 16, 20, 0.38);
+  --fg-on-accent: var(--paper-50);
+  --fg-on-ink:    var(--paper-50);
+  --fg-link:      var(--periwinkle-600);
+
+  --bg:          var(--paper-canvas); /* warm papyrus scaffold */
+  --surface-1:   var(--paper-50);     /* white card on parchment, separated by border */
+  --surface-2:   var(--paper-100);    /* nested */
+  --surface-inv: var(--ink-900);
+
+  --line:        var(--paper-300);
+  --line-strong: var(--paper-400);
+
+  --accent:           var(--periwinkle-500);
+  --accent-hover:     var(--periwinkle-600);
+  --accent-press:     var(--periwinkle-700);
+  --accent-soft-bg:   var(--periwinkle-50);
+  --accent-soft-fg:   var(--periwinkle-700);
+
+  --accent-2:         var(--teal-500);
+  --accent-2-soft-bg: var(--teal-50);
+  --accent-2-soft-fg: var(--teal-700);
+
+  --highlight:        var(--amber-500); /* warm spark for marginalia/highlights */
+  --highlight-soft:   var(--amber-100);
+
+  --success:          var(--sage-500);
+  --success-soft-bg:  var(--sage-50);
+  --success-soft-fg:  var(--sage-700);
+  --warning:          var(--amber-500);
+  --warning-soft-bg:  var(--amber-50);
+  --warning-soft-fg:  var(--amber-700);
+  --danger:           var(--wine-500);
+  --danger-soft-bg:   var(--wine-50);
+  --danger-soft-fg:   var(--wine-700);
+
+  /* Reading Chapter: immersive story surfaces. These stay semantic so the
+     mobile story, generated share image, and public web can share one mood. */
+  --chapter-canvas:      var(--paper-canvas);
+  --chapter-card:        var(--paper-50);
+  --chapter-card-warm:   var(--amber-50);
+  --chapter-card-cool:   var(--teal-50);
+  --chapter-card-inverse:var(--ink-900);
+  --chapter-accent:      var(--periwinkle-500);
+  --chapter-spark:       var(--amber-500);
+  --chapter-page-ease:   var(--ease-page);
+  --chapter-night-canvas:    #0E1018;
+  --chapter-night-card:      #171B28;
+  --chapter-night-warm:      #332719;
+  --chapter-night-cool:      #102C2A;
+  --chapter-night-fg:        #F4F2EE;
+  --chapter-night-muted:     #202534;
+  --chapter-night-muted-fg:  #B9BAC2;
+  --chapter-night-accent-bg: #292E50;
+  --chapter-night-line:      rgba(244, 242, 238, 0.14);
+}
+
+/* ============================================================
+   DARK THEME (Night reading mode — deep cool ink, not oxblood)
+   ============================================================ */
+:root[data-theme="dark"],
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:          #0E1018;     /* deep ink-blue, near-black */
+    --surface-1:   #161A26;
+    --surface-2:   #1F2433;
+    --surface-inv: var(--paper-50);
+
+    --fg-1:        #F2F2F5;     /* cool cream */
+    --fg-2:        #B7B8C0;
+    --fg-3:        #8082903F;
+
+    --fg-1:        #F2F2F5;
+    --fg-2:        #B7B8C0;
+    --fg-3:        #808290;
+    --fg-disabled: rgba(242, 242, 245, 0.38);
+
+    --line:        rgba(242, 242, 245, 0.10);
+    --line-strong: rgba(242, 242, 245, 0.20);
+
+    --accent:          #A8ADDD;       /* periwinkle-300, brighter in dark */
+    --accent-hover:    #C5C9EA;
+    --accent-press:    #E2E4F4;
+    --accent-soft-bg:  rgba(168, 173, 221, 0.16);
+    --accent-soft-fg:  #C5C9EA;
+
+    --accent-2:         var(--teal-300);
+    --accent-2-soft-bg: rgba(159, 116, 154, 0.16);
+    --accent-2-soft-fg: var(--teal-200);
+
+    --highlight:      var(--amber-400);
+    --highlight-soft: rgba(219, 163, 80, 0.18);
+
+    --success:         var(--sage-300);
+    --success-soft-bg: rgba(130, 160, 119, 0.16);
+    --success-soft-fg: var(--sage-200);
+    --warning:         var(--amber-400);
+    --warning-soft-bg: rgba(219, 163, 80, 0.16);
+    --warning-soft-fg: var(--amber-200);
+    --danger:          var(--wine-300);
+    --danger-soft-bg:  rgba(196, 90, 90, 0.18);
+    --danger-soft-fg:  var(--wine-200);
+
+    --shadow-raised:   0 1px 0 rgba(0, 0, 0, 0.5),
+                       0 4px 12px -4px rgba(0, 0, 0, 0.6);
+    --shadow-floating: 0 1px 0 rgba(0, 0, 0, 0.5),
+                       0 14px 36px -10px rgba(0, 0, 0, 0.75);
+  }
+}
+
+/* ============================================================
+   SEMANTIC TYPE STYLES — unchanged
+   ============================================================ */
+.t-display-xl, h1.editorial {
+  font-family: var(--font-display); font-weight: var(--fw-regular);
+  font-size: var(--fs-5xl); line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight); color: var(--fg-1);
+}
+.t-display-lg {
+  font-family: var(--font-display); font-weight: var(--fw-regular);
+  font-size: var(--fs-4xl); line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight); color: var(--fg-1);
+}
+.t-display-md, h1 {
+  font-family: var(--font-display); font-weight: var(--fw-regular);
+  font-size: var(--fs-3xl); line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight); color: var(--fg-1);
+}
+.t-h2, h2 {
+  font-family: var(--font-display); font-weight: var(--fw-regular);
+  font-size: var(--fs-2xl); line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight); color: var(--fg-1);
+}
+.t-h3, h3 {
+  font-family: var(--font-ui); font-weight: var(--fw-semi);
+  font-size: var(--fs-xl); line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight); color: var(--fg-1);
+}
+.t-h4, h4 {
+  font-family: var(--font-ui); font-weight: var(--fw-semi);
+  font-size: var(--fs-lg); line-height: var(--lh-snug); color: var(--fg-1);
+}
+.t-body, p, li {
+  font-family: var(--font-ui); font-weight: var(--fw-regular);
+  font-size: var(--fs-md); line-height: var(--lh-relaxed); color: var(--fg-1);
+}
+.t-body-sm {
+  font-family: var(--font-ui); font-weight: var(--fw-regular);
+  font-size: var(--fs-sm); line-height: var(--lh-normal); color: var(--fg-2);
+}
+.t-label {
+  font-family: var(--font-ui); font-weight: var(--fw-medium);
+  font-size: var(--fs-sm); line-height: var(--lh-snug); color: var(--fg-1);
+}
+.t-meta, small {
+  font-family: var(--font-ui); font-weight: var(--fw-regular);
+  font-size: var(--fs-xs); line-height: var(--lh-normal); color: var(--fg-3);
+}
+.t-eyebrow {
+  font-family: var(--font-ui); font-weight: var(--fw-semi);
+  font-size: var(--fs-xs); line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--fg-2);
+}
+.t-quote, blockquote {
+  font-family: var(--font-display); font-style: italic;
+  font-weight: var(--fw-regular); font-size: var(--fs-xl);
+  line-height: var(--lh-relaxed); color: var(--fg-1);
+}
+.t-mono, code, kbd {
+  font-family: var(--font-mono); font-size: 0.92em;
+  font-weight: var(--fw-regular); font-feature-settings: "calt" 0;
+}
+.t-book-title {
+  font-family: var(--font-display); font-style: italic; font-weight: var(--fw-regular);
+}
+
+html {
+  background: var(--bg);
+  color: var(--fg-1);
+  font-family: var(--font-ui);
+  font-size: var(--fs-base);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+body { margin: 0; font-feature-settings: "ss01" 1, "cv11" 1; }

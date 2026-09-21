@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is off -->
+    <style name="LaunchTheme.Base" parent="@android:style/Theme.Light.NoTitleBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             the Flutter engine draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:navigationBarColor">#FFFAF5EF</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <style name="LaunchTheme" parent="LaunchTheme.Base" />
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme.Base" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">#FFFAF5EF</item>
+        <item name="android:navigationBarColor">#FFFAF5EF</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <style name="NormalTheme" parent="NormalTheme.Base" />
+    <!-- image_cropper (UCrop). Dark base (so no white surfaces leak through) +
+         an opaque, non-translucent status bar with fitsSystemWindows so the crop
+         area + its drag handles sit BELOW the phone's top bar (not under it).
+         Colours are brand periwinkle; the runtime AndroidUiSettings reapply them. -->
+    <style name="Theme.Ucrop" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">#44489A</item>
+        <item name="android:windowBackground">#0F1014</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+    <style name="ReadendarWidgetConfigTheme" parent="@android:style/Theme.Material.Light.NoActionBar" />
+</resources>

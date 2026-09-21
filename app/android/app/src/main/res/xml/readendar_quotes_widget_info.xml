@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Quotes widget metadata: a 4x2 card (one quote + footer). Configurable on
+     add AND reconfigurable (long-press → Reconfigure, API 28+) via
+     ReadendarQuotesConfigActivity; per-instance prefs are keyed by
+     appWidgetId. updatePeriodMillis supplements the 15-min WorkManager tick —
+     rotation granularity comes from the render-time bucket formula. -->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="250dp"
+    android:minHeight="70dp"
+    android:minResizeWidth="180dp"
+    android:minResizeHeight="40dp"
+    android:targetCellWidth="4"
+    android:targetCellHeight="2"
+    android:updatePeriodMillis="1800000"
+    android:initialLayout="@layout/readendar_quotes_widget"
+    android:previewLayout="@layout/readendar_quotes_widget"
+    android:configure="com.readendar.readendar.ReadendarQuotesConfigActivity"
+    android:widgetFeatures="reconfigurable"
+    android:resizeMode="horizontal|vertical"
+    android:widgetCategory="home_screen" />

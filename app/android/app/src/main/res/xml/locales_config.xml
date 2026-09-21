@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Declares the locales the app ships translations for, so Android 13+ (API 33)
+  exposes Readendar under Settings → Apps → Readendar → Language (per-app
+  language). Must stay in sync with AppL10n.supportedLocales
+  (lib/core/l10n/gen/app_localizations.dart) and the .arb files in
+  lib/core/l10n/arb/. Spanish is the only product locale; the app is available
+  worldwide.
+-->
+<locale-config xmlns:android="http://schemas.android.com/apk/res/android">
+    <locale android:name="es"/>
+</locale-config>

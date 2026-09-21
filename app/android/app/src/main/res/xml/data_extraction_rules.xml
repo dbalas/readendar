@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup/transfer exclusions (API 31+). After a local import, SQLite
+     (readendar_local.sqlite) and covers/ in app support storage are eligible
+     for cloud backup and device-to-device transfer: they are not listed here.
+     Do not mark those files with NSURLIsExcludedFromBackupKey on iOS either.
+     HomeWidgetPreferences stays excluded: widget snapshots share that file with
+     widget-session JWTs on the API plane, and live credentials must not leave
+     the device. flutter_secure_storage pref files stay excluded because they
+     are encrypted with THIS device's Keystore key. Keep in sync with
+     backup_rules.xml (<= API 30). -->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="HomeWidgetPreferences.xml"/>
+        <exclude domain="sharedpref" path="FlutterSecureStorage.xml"/>
+        <exclude domain="sharedpref" path="FlutterSecureKeyStorage.xml"/>
+        <exclude domain="file" path="import_checkpoint.json"/>
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="HomeWidgetPreferences.xml"/>
+        <exclude domain="sharedpref" path="FlutterSecureStorage.xml"/>
+        <exclude domain="sharedpref" path="FlutterSecureKeyStorage.xml"/>
+        <exclude domain="file" path="import_checkpoint.json"/>
+    </device-transfer>
+</data-extraction-rules>

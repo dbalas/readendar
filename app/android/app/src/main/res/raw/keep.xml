@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Resources referenced only by string name at runtime are invisible to the R8
+  resource shrinker (isShrinkResources = true) and get stripped from release
+  builds, even though they're present in debug. flutter_local_notifications
+  looks up the small-icon drawable by name (`ic_stat_readendar`, see
+  lib/features/notifications/notification_actions.dart) — without this keep the
+  release APK throws PlatformException(invalid_icon) during boot and hangs on
+  the splash screen. Add any other by-name-only resource here.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@drawable/ic_stat_readendar" />

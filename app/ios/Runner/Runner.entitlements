@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:api.readendar.com</string>
+		<string>applinks:readendar.com</string>
+	</array>
+	<!-- Shared with the ReadendarWidget extension so both read the same
+	     home_widget UserDefaults suite (locale, theme, cache) and the same
+	     Keychain access group (widget session tokens). -->
+	<key>com.apple.security.application-groups</key>
+	<array>
+		<string>group.com.readendar.readendar</string>
+	</array>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>$(AppIdentifierPrefix)group.com.readendar.readendar</string>
+	</array>
+	<!-- Sign in with Apple: App Store requires it when Google sign-in is offered. -->
+	<key>com.apple.developer.applesignin</key>
+	<array>
+		<string>Default</string>
+	</array>
+</dict>
+</plist>

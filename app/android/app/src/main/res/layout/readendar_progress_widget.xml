@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Quick progress widget. Its hierarchy intentionally mirrors
+     readendar_widget_medium + readendar_widget_event_row:
+     shared wordmark header, app-card surface, xs cover, compact metadata,
+     progress bar, and accent footer action. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pwdg_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="?android:attr/colorBackground">
+
+    <LinearLayout
+        android:id="@+id/pwdg_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pwdg_brand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:letterSpacing="0.1"
+            android:text="READENDAR"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/pwdg_reading_strip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/pwdg_book_0"
+                android:layout_width="26dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/wdg_progress_cover_clip"
+                android:clipToOutline="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/pwdg_book_1"
+                android:layout_width="26dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/wdg_progress_cover_clip"
+                android:clipToOutline="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/pwdg_book_2"
+                android:layout_width="26dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/wdg_progress_cover_clip"
+                android:clipToOutline="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/pwdg_book_3"
+                android:layout_width="26dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/wdg_progress_cover_clip"
+                android:clipToOutline="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pwdg_keypad"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginBottom="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pwdg_keypad_value"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:gravity="start|center_vertical"
+                android:maxLines="1"
+                android:text="120"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/pwdg_keypad_field"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/wdg_progress_control_light"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="10dp"
+                android:paddingEnd="8dp">
+
+                <ImageView
+                    android:id="@+id/pwdg_keypad_field_icon"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginEnd="6dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/wdg_ic_page" />
+
+                <TextView
+                    android:id="@+id/pwdg_keypad_field_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="6dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="Pages"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/pwdg_keypad_field_chevron"
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="›"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pwdg_keypad_cancel"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/wdg_progress_control_light"
+                android:gravity="center"
+                android:text="×"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pwdg_key_1"
+                style="@style/WidgetProgressKey"
+                android:text="1" />
+            <TextView
+                android:id="@+id/pwdg_key_2"
+                style="@style/WidgetProgressKey"
+                android:text="2" />
+            <TextView
+                android:id="@+id/pwdg_key_3"
+                style="@style/WidgetProgressKey"
+                android:text="3" />
+            <TextView
+                android:id="@+id/pwdg_key_backspace"
+                style="@style/WidgetProgressKeyLast"
+                android:text="⌫" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pwdg_key_4"
+                style="@style/WidgetProgressKey"
+                android:text="4" />
+            <TextView
+                android:id="@+id/pwdg_key_5"
+                style="@style/WidgetProgressKey"
+                android:text="5" />
+            <TextView
+                android:id="@+id/pwdg_key_6"
+                style="@style/WidgetProgressKey"
+                android:text="6" />
+            <TextView
+                android:id="@+id/pwdg_key_0"
+                style="@style/WidgetProgressKeyLast"
+                android:text="0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pwdg_key_7"
+                style="@style/WidgetProgressKey"
+                android:text="7" />
+            <TextView
+                android:id="@+id/pwdg_key_8"
+                style="@style/WidgetProgressKey"
+                android:text="8" />
+            <TextView
+                android:id="@+id/pwdg_key_9"
+                style="@style/WidgetProgressKey"
+                android:text="9" />
+            <TextView
+                android:id="@+id/pwdg_key_submit"
+                style="@style/WidgetProgressKeyLast"
+                android:background="@drawable/wdg_progress_button_light"
+                android:text="✓"
+                android:textColor="#FFFFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pwdg_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/pwdg_card"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/wdg_progress_card_light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="32dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="10dp">
+
+                    <TextView
+                        android:id="@+id/pwdg_cover_fallback"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/wdg_progress_cover_fallback"
+                        android:gravity="center"
+                        android:text="T"
+                        android:textColor="#FFFFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/pwdg_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/wdg_progress_cover_clip"
+                        android:clipToOutline="true"
+                        android:contentDescription="@null"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pwdg_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/widget_progress_preview_title"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/pwdg_author"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/widget_progress_preview_author"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/pwdg_meta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/pwdg_page_icon"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_marginEnd="3dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/wdg_ic_page" />
+
+                        <TextView
+                            android:id="@+id/pwdg_pages"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="120 / 300"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/pwdg_separator_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  ·  "
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/pwdg_percentage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="40%"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/pwdg_separator_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  ·  "
+                            android:textSize="10sp" />
+
+                        <ImageView
+                            android:id="@+id/pwdg_chapter_icon"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_marginEnd="3dp"
+                            android:contentDescription="@null"
+                            android:src="@drawable/wdg_ic_chapter" />
+
+                        <TextView
+                            android:id="@+id/pwdg_chapter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="7 / 20"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/pwdg_progress"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="6dp"
+                android:max="100"
+                android:progress="40"
+                android:progressDrawable="@drawable/wdg_progress_bar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pwdg_controls"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pwdg_save"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:autoSizeMaxTextSize="11sp"
+                android:autoSizeMinTextSize="8sp"
+                android:autoSizeStepGranularity="1sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/wdg_progress_button_light"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/widget_progress_update"
+                android:textColor="#FFFFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pwdg_empty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/pwdg_empty_icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@null"
+            android:src="@drawable/wdg_ic_page" />
+
+        <TextView
+            android:id="@+id/pwdg_empty_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/widget_progress_empty"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pwdg_empty_action"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/widget_progress_library"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

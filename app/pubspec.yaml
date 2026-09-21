@@ -1,0 +1,158 @@
+name: readendar
+description: "Readendar: local-first reading planner."
+publish_to: "none"
+version: 1.2.0+12
+
+environment:
+  sdk: ^3.12.0
+  flutter: ">=3.44.6"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State + DI
+  # 3.4.0 fixes provider flushes that call markNeedsBuild during a widget build.
+  flutter_riverpod: ^3.4.0
+
+  # HTTP
+  dio: ^5.7.0
+  google_sign_in: ^7.2.0
+  sign_in_with_apple: ^8.1.0
+
+  # Storage & platform
+  flutter_secure_storage: ^10.0.0
+  shared_preferences: ^2.3.3
+  path_provider: ^2.1.5
+  path: ^1.9.1
+  sqflite: ^2.4.2
+
+  # Deep linking
+  app_links: ^7.2.1
+
+  # Media
+  cached_network_image: ^3.4.1
+  flutter_cache_manager: ^3.4.1
+  image_picker: ^1.1.2
+  # Direct deps only so main.dart can flip on the Android Photo Picker (see
+  # _enableAndroidPhotoPicker). That opt-in is what lets us ship without
+  # READ_MEDIA_IMAGES — see android/app/src/main/AndroidManifest.xml.
+  image_picker_android: ^0.8.12
+  image_picker_platform_interface: ^2.10.0
+  image_cropper: ^12.0.0
+  flutter_svg: ^2.0.16
+  image: ^4.3.0
+
+  # Library import (Goodreads CSV/Kindle text): use Flutter's first-party
+  # selector so Android and iOS use their native document pickers.
+  file_selector: ^1.1.0
+  csv: ^8.0.0
+  excel: ^4.0.6
+
+  # Barcode / ISBN scanning
+  mobile_scanner: ^7.2.0
+  permission_handler: ^12.0.3
+
+  # Quote capture (features/quotes): on-device OCR (photo → selectable lines)
+  # and streaming voice dictation into the composer. Both work offline.
+  # text_sight: Apple Vision on iOS (no GoogleMLKit pods); ML Kit on Android
+  # only. Bundle the Android model via android/gradle.properties so OCR stays
+  # offline-first like the previous google_mlkit_text_recognition path.
+  text_sight: ^0.1.1
+  speech_to_text: ^7.0.0
+  # OS quick action (long-press app icon → "Nueva cita" → composer deep link).
+  quick_actions: ^1.1.0
+
+  # System UX
+  connectivity_plus: ^7.2.0
+  flutter_local_notifications: ^22.0.0
+  timezone: ^0.11.0
+  url_launcher: ^6.3.1
+  # 13.x requires win32 6, while flutter_quill 11.5.1's latest native bridge
+  # still requires win32 5. Keep the newest resolvable release for now.
+  share_plus: ^12.0.2
+  # Home-screen widgets (Android + iOS): the Flutter↔native bridge for the
+  # shared-storage handoff (widget-session token, locale, theme), the Android
+  # one-tap pin request, and triggering native widget reloads. The actual widget
+  # UI + data fetch live in the native targets (ios/WidgetExtension, android Glance).
+  home_widget: ^0.9.0
+  # App version for feedback/bug-report diagnostics (auto-registers on iOS+Android).
+  # 10.x has the same win32 6 conflict with flutter_quill's native bridge.
+  package_info_plus: ^9.0.1
+  # i18n
+  intl: any
+
+  # Icons
+  # Required by Flutter's Cupertino chrome (nav-bar back chevron, etc.).
+  # Without this font those glyphs render as iOS tofu (?).
+  cupertino_icons: ^1.0.8
+  lucide_flutter: ^1.14.0
+
+  # Charts (reading stats) — pure-Dart, Android/iOS parity
+  fl_chart: ^1.2.0
+
+  # Celebration animations (confetti + fireworks on book finish)
+  confetti: ^0.8.0
+
+  # IDs
+  uuid: ^4.5.1
+
+  # Utils
+  collection: ^1.18.0
+  meta: ^1.18.0
+  flutter_quill: ^11.5.0
+  markdown_quill: ^4.3.0
+  markdown: ^7.3.1
+  flutter_timezone: ^5.1.0
+  in_app_review: ^2.0.12
+  archive: ^3.6.1
+
+dev_dependencies:
+  flutter_local_notifications_platform_interface: ^12.0.0
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  very_good_analysis: ^10.3.0
+
+  mocktail: ^1.0.4
+  sqflite_common_ffi: ^2.3.4
+  network_image_mock: ^2.1.1
+  plugin_platform_interface: ^2.1.8
+
+flutter:
+  # permission_handler_apple 9.4.10 has broken header resolution in Flutter's
+  # hybrid SwiftPM/CocoaPods build. Keep one native dependency manager until
+  # that upstream package converges (OCR no longer needs GoogleMLKit on iOS).
+  config:
+    enable-swift-package-manager: false
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/icons/
+    - assets/images/
+
+  fonts:
+    - family: Newsreader
+      fonts:
+        - asset: assets/fonts/Newsreader-Variable.ttf
+    - family: Fredoka
+      fonts:
+        - asset: assets/fonts/Fredoka-Variable.ttf
+    - family: DMSans
+      fonts:
+        - asset: assets/fonts/DMSans-Variable.ttf
+    # lucide_flutter IconData asks for `LucideIcons`; the upstream TTF name
+    # table said `lucide`, which iOS CoreText misses (tofu). Ship a copy
+    # under both family names and alias the package-prefixed lookup at boot.
+    - family: lucide
+      fonts:
+        - asset: assets/fonts/lucide.ttf
+    - family: LucideIcons
+      fonts:
+        - asset: assets/fonts/lucide.ttf

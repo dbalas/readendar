@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Medium/large widget: a "READENDAR" wordmark + a "currently reading" cover
+     strip on top, then a SCROLLABLE list of upcoming events rendered as app-
+     style rows (see readendar_widget_event_row + buildEventRow). Colors are
+     applied at runtime by ReadendarWidgetProvider so the whole widget follows
+     the user's effective (light/dark) theme; the layout ships neutral defaults. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wdg_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="?android:attr/colorBackground">
+
+    <!-- Header: wordmark on the left, reading-book cover strip on the right. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <!-- Wordmark: a single view so letter-spacing is uniform across the
+             whole word (the "READ" portion is tinted with a runtime span). -->
+        <TextView
+            android:id="@+id/wdg_brand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="READENDAR"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1" />
+
+        <LinearLayout
+            android:id="@+id/wdg_reading_strip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/wdg_book_0"
+                android:layout_width="26dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="4dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@null"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/wdg_book_1"
+                android:layout_width="26dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="4dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@null"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/wdg_book_2"
+                android:layout_width="26dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="4dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@null"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/wdg_book_3"
+                android:layout_width="26dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="4dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@null"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Scrollable event list + its empty view (shown when there are none). -->
+    <ListView
+        android:id="@+id/wdg_event_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:scrollbars="none" />
+
+    <!-- Empty / error state: an icon above the message (not a bare line). Used
+         as the ListView's empty view; icon + text are set at runtime. -->
+    <LinearLayout
+        android:id="@+id/wdg_empty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/wdg_empty_icon"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/wdg_empty_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:text="" />
+    </LinearLayout>
+
+    <!-- "Open calendar to see more" — shown only when there are more events than
+         the widget returns (hasMore). -->
+    <TextView
+        android:id="@+id/wdg_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:visibility="gone"
+        android:text="" />
+</LinearLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- app_links owns every incoming URI. Disable Flutter's parallel named-route
+	     dispatch so one link cannot be handled twice. -->
+	<key>FlutterDeepLinkingEnabled</key>
+	<false/>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<!-- Languages/regions the app ships UI for. Keep in sync with
+	     AppL10n.supportedLocales / lib/core/l10n/app_locales.dart so iOS negotiates
+	     the right locale and the App Store lists the supported languages. -->
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>es</string>
+	</array>
+	<key>CFBundleDisplayName</key>
+	<string>Readendar</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>readendar</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Readendar usa la cámara para escanear códigos de barras de libros (ISBN), fotografiar páginas para capturar citas y para subir portadas.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Readendar usa tu fototeca para capturar citas y subir portadas.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Readendar usa el micrófono para dictar citas de libros por voz.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Readendar transcribe tu dictado en el dispositivo para capturar citas de libros por voz.</string>
+	<!-- Google Sign-In (iOS): GIDClientID is the iOS OAuth client; the URL scheme
+	     below is its reversed form. GIDServerClientID must be the *web* client id
+	     the backend verifies against (same as GOOGLE_SERVER_CLIENT_ID). Without it,
+	     Google mints an idToken whose aud is the iOS client and POST
+	     /v1/auth/oauth/google returns 401. -->
+	<key>GIDClientID</key>
+	<string>724407297440-vtub67r9dkr4ksv6l5lkj0coi79qe84e.apps.googleusercontent.com</string>
+	<key>GIDServerClientID</key>
+	<string>724407297440-ntu5jglbivracdthm7fdpbgptrhq6lbv.apps.googleusercontent.com</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.724407297440-vtub67r9dkr4ksv6l5lkj0coi79qe84e</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.readendar.readendar</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>readendar</string>
+			</array>
+		</dict>
+	</array>
+	<!-- "Open in / Copy to Readendar" for a supported library CSV export. iOS copies the
+	     file into the app's Inbox and hands us a readable file:// URL, which
+	     ImportDeepLink detects and parses. The in-app file picker remains available. -->
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>CSV file</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Alternate</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>public.comma-separated-values-text</string>
+			</array>
+		</dict>
+	</array>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<false/>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.2.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>12</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<!-- HTTPS + OS crypto only. Lets App Store skip the export-compliance prompt. -->
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UISceneConfigurations</key>
+		<dict>
+			<key>UIWindowSceneSessionRoleApplication</key>
+			<array>
+				<dict>
+					<key>UISceneClassName</key>
+					<string>UIWindowScene</string>
+					<key>UISceneConfigurationName</key>
+					<string>flutter</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+					<!-- No UISceneStoryboardFile: SceneDelegate builds the window with
+					     FlutterViewController(engine:) against the AppDelegate's
+					     already-running engine. Storyboard + implicit engine races
+					     viewDidLoad on iOS 26 ProMotion (VSync SIGSEGV). -->
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<!-- UIMainStoryboardFile intentionally omitted: root UI is created in
+	     SceneDelegate with an explicit FlutterEngine (see AppDelegate). -->
+	<!-- Do not set UIUserInterfaceStyle: Flutter owns light/dark/system. A
+	     forced Light value breaks system chrome + dark-mode parity on iOS. -->
+	<!-- Local debug API (http://localhost:8080). Cleartext to loopback needs
+	     NSAllowsLocalNetworking; mirrors the widget extension Info.plist. -->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+</dict>
+</plist>

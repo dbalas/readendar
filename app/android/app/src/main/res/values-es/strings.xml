@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_events_name">Próximos eventos</string>
+    <string name="widget_quotes_name">Citas</string>
+    <string name="widget_progress_name">Progreso de lectura</string>
+    <string name="widget_progress_update">Actualizar progreso</string>
+    <string name="widget_progress_empty">Añade una lectura</string>
+    <string name="widget_progress_library">Ir a la biblioteca</string>
+    <string name="widget_progress_preview_pages">120 / 300\nPáginas</string>
+    <string name="widget_progress_preview_percentage">40%\nPorcentaje</string>
+    <string name="widget_progress_preview_chapter">7 / 20\nCapítulo</string>
+</resources>

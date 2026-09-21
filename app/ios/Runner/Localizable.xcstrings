@@ -1,0 +1,72 @@
+{
+  "sourceLanguage" : "es",
+  "strings" : {
+    "Abre el calendario de lectura en Readendar." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre el calendario de lectura en Readendar."
+          }
+        }
+      }
+    },
+    "Abre el compositor de anotaciones en Readendar." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre el compositor de anotaciones en Readendar."
+          }
+        }
+      }
+    },
+    "Abre el progreso de lectura en Readendar." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre el progreso de lectura en Readendar."
+          }
+        }
+      }
+    },
+    "Nueva anotación" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nueva anotación"
+          }
+        }
+      }
+    },
+    "Qué toca leer" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Qué toca leer"
+          }
+        }
+      }
+    },
+    "Registrar progreso" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registrar progreso"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

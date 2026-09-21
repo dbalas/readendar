@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand periwinkle. Background layer of the adaptive launcher icon;
+         must match the `rect fill` in assets/icons/app-icon.svg. Intentionally
+         NOT night-qualified — the launcher icon is the same in both themes. -->
+    <color name="ic_launcher_background">#7479D6</color>
+</resources>

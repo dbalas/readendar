@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" role="img" aria-label="readendar">
+  <defs>
+    
+  </defs>
+  <g transform="translate(8 16) scale(0.75)" style="color:#7479D6">
+    <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="10" y="14" width="44" height="42" rx="5"></rect>
+      <line x1="22" y1="10" x2="22" y2="18"></line>
+      <line x1="42" y1="10" x2="42" y2="18"></line>
+      <line x1="10" y1="26" x2="54" y2="26"></line>
+    </g>
+    <g fill="currentColor">
+            <rect x="15.5" y="35" width="4" height="4" rx="0.6"></rect>
+            <rect x="23.5" y="35" width="4" height="4" rx="0.6"></rect>
+            <rect x="31.5" y="35" width="4" height="4" rx="0.6"></rect>
+            <rect x="15.5" y="43" width="4" height="4" rx="0.6"></rect>
+            <rect x="23.5" y="43" width="4" height="4" rx="0.6"></rect>
+            <rect x="31.5" y="43" width="4" height="4" rx="0.6"></rect>
+          </g>
+          <path d="M 39 26 H 49 V 52 L 44 47 L 39 52 Z" fill="currentColor"></path></g></svg>

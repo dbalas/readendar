@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Quotes widget: a FrameLayout so a style can layer a blurred cover + scrim
+     BEHIND the content (the "coverGradient" appearance). The root background is
+     set at render time (WTheme for "auto", a fixed palette colour, or a gradient
+     drawable for the brand-gradient styles); qwdg_bg/qwdg_scrim stay GONE except
+     for the cover style. Text colours are applied at render time too so every
+     style + the light/dark override in wdg_theme are respected. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/qwdg_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground">
+
+    <!-- Blurred cover fill (coverGradient style only). -->
+    <ImageView
+        android:id="@+id/qwdg_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:contentDescription="@null" />
+
+    <!-- Brand-gradient fill (gradient* styles). fitXY stretches the square
+         gradient bitmap corner-to-corner regardless of the widget aspect ratio. -->
+    <ImageView
+        android:id="@+id/qwdg_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:contentDescription="@null" />
+
+    <!-- Dark scrim over the cover so the paper-tone text stays legible. Must be
+         an ImageView, not a bare View: app-widget RemoteViews only inflate a
+         fixed set of classes (FrameLayout/LinearLayout/ImageView/TextView/…) and
+         a plain <View> makes the launcher fail with "Problem loading widget". -->
+    <ImageView
+        android:id="@+id/qwdg_scrim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:contentDescription="@null"
+        android:background="#B3141326" />
+
+    <LinearLayout
+        android:id="@+id/qwdg_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <TextView
+            android:id="@+id/qwdg_brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="READENDAR"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:letterSpacing="0.1" />
+
+        <LinearLayout
+            android:id="@+id/qwdg_body"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/qwdg_text"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:maxLines="5"
+                android:ellipsize="end"
+                android:fontFamily="serif"
+                android:textStyle="italic"
+                android:textSize="15sp"
+                android:lineSpacingMultiplier="1.25"
+                android:text="" />
+
+            <!-- Private note: GONE unless the instance's config opts in AND the
+                 quote has one (set at render time). -->
+            <TextView
+                android:id="@+id/qwdg_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textSize="11sp"
+                android:lineSpacingMultiplier="1.2"
+                android:visibility="gone"
+                android:text="" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:id="@+id/qwdg_cover"
+                    android:layout_width="24dp"
+                    android:layout_height="34dp"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@null" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/qwdg_book_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/qwdg_book_meta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textSize="11sp"
+                        android:text="" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/qwdg_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="6dp"
+                    android:text="★"
+                    android:textColor="#DD9D2B"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/qwdg_empty"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:text="" />
+    </LinearLayout>
+</FrameLayout>

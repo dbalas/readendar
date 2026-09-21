@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Widget metadata. The default footprint is a tall 4x4 (~half the phone
+     screen) so the scrollable event list shows several rows at once; the
+     medium layout's ListView has layout_weight=1, so it grows to fill the
+     extra height. minResizeWidth/Height keep a low resize floor so the user
+     can still shrink it down toward the ~2x1 small cell (ReadendarWidgetProvider
+     switches to readendar_widget_small below SMALL_WIDTH_THRESHOLD_DP).
+     previewLayout shown in the picker. -->
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="250dp"
+    android:minHeight="270dp"
+    android:minResizeWidth="110dp"
+    android:minResizeHeight="60dp"
+    android:targetCellWidth="4"
+    android:targetCellHeight="4"
+    android:updatePeriodMillis="1800000"
+    android:initialLayout="@layout/readendar_widget_medium"
+    android:previewLayout="@layout/readendar_widget_medium"
+    android:resizeMode="horizontal|vertical"
+    android:widgetCategory="home_screen" />

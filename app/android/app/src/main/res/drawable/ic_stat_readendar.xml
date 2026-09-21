@@ -1,0 +1,42 @@
+<!-- Monochrome status-bar / notification icon. Android renders the small icon
+     from its alpha channel and tints it, so this MUST be a white-on-transparent
+     silhouette (no periwinkle background). Glyph = the calendar + bookmark from
+     design/app-icon.svg, kept in the original 64-unit coordinate space. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <!-- Calendar frame (rounded rect x10 y14 w44 h42 r5), stroked -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M15,14 L49,14 A5,5 0 0 1 54,19 L54,51 A5,5 0 0 1 49,56 L15,56 A5,5 0 0 1 10,51 L10,19 A5,5 0 0 1 15,14 Z" />
+    <!-- Top hanger ticks -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M22,10 L22,18" />
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M42,10 L42,18" />
+    <!-- Header divider -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M10,26 L54,26" />
+    <!-- Bookmark (filled) -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M39,26 L49,26 L49,52 L44,47 L39,52 Z" />
+</vector>

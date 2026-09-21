@@ -1,0 +1,1842 @@
+{
+  "@@locale": "es",
+  "betaBadge": "BETA",
+  "reviewTitle": "Reseña",
+  "reviewHint": "Escribe una reseña…",
+  "finishWithoutReview": "Terminar sin reseña",
+  "bookSectionExpand": "Mostrar libros",
+  "bookSectionCollapse": "Ocultar libros",
+  "loadMore": "Cargar más",
+  "pushPermissionDenied": "Activa los permisos de notificación para recibir avisos.",
+  "pushTokenUnavailable": "No se pudo preparar el aviso de notificación.",
+  "bannerEditTitle": "Personalizar banner",
+  "imageCropTitle": "Recortar imagen",
+  "bannerCustomize": "Personalizar banner",
+  "bannerSectionColors": "Colores y fondos",
+  "bannerSectionImage": "Imagen",
+  "bannerChoosePhoto": "Elegir foto",
+  "bannerRemovePhoto": "Quitar foto",
+  "bannerReset": "Restablecer",
+  "bannerPresetA11y": "Fondo {index}",
+  "@bannerPresetA11y": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "appName": "Readendar",
+  "@appName": {
+    "description": "Application name"
+  },
+  "tourSkip": "Saltar",
+  "tourNext": "Siguiente",
+  "tourGetStarted": "Empezar",
+  "tourWelcomeTitle": "Bienvenido a Readendar",
+  "tourWelcomeSubtitle": "Tu vida lectora, perfectamente organizada.",
+  "tourCalendarTitle": "Tu calendario de lectura",
+  "tourCalendarSubtitle": "Ve cada inicio, hito y fecha límite de un vistazo.",
+  "tourPlannerTitle": "Planifica tus lecturas",
+  "tourPlannerSubtitle": "Nuestro asistente te crea un plan de lectura a tu ritmo, para cualquier libro.",
+  "tourLibraryTitle": "Trae tu biblioteca",
+  "tourLibrarySubtitle": "Importa tu biblioteca desde tus aplicaciones de lectura en segundos.",
+  "tourQuotesTitle": "Guarda cada línea y cada nota que no quieres olvidar",
+  "tourQuotesSubtitle": "Notas, citas, teoría y preguntas. Escríbelas, díctalas o hazles una foto, y compártelas a tu manera.",
+  "tourMoreTitle": "Y mucho más",
+  "tourMoreSubtitle": "Widgets, estadísticas, ruleta, tu capítulo lector y recordatorios. Todo está aquí.",
+  "tourMoreRoulette": "Ruleta de lectura",
+  "tourMoreWidgets": "Widgets",
+  "tourMoreStats": "Estadísticas",
+  "@betaBadge": {
+    "description": "Small badge marking a feature as in testing."
+  },
+  "navHome": "Inicio",
+  "navLibrary": "Libros",
+  "navCalendar": "Calendario",
+  "navYou": "Perfil",
+  "exploreCatalogMatchOfferRelease": "Añadir evento de Lanzamiento",
+  "@exploreCatalogMatchOfferRelease": {
+    "description": "Add-book form banner title when offering an upcoming release calendar event."
+  },
+  "settingsTitle": "Ajustes",
+  "greetingMorning": "Buenos días, {name}",
+  "@greetingMorning": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "greetingAfternoon": "Buenas tardes, {name}",
+  "@greetingAfternoon": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "greetingEvening": "Buenas noches, {name}",
+  "@greetingEvening": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "sectionToday": "Hoy",
+  "sectionReading": "Leyendo",
+  "sectionEvents": "Eventos",
+  "sectionSynopsis": "Sinopsis",
+  "ratingLabel": "Valoración",
+  "ratingUnrated": "Sin valorar",
+  "ratingClear": "Restablecer",
+  "notesEditTitle": "Editar notas",
+  "notesHint": "Escribe tus notas privadas…",
+  "notesPrivateHint": "Solo tú puedes ver esto.",
+  "emptyToday": "Día tranquilo. Sin eventos.",
+  "emptyEvents": "Aún no hay eventos para este libro. Añade un hito, una fecha límite o un fin de lectura.",
+  "homeMetricPending": "Pendientes",
+  "homeMetricWanted": "Deseados",
+  "homeNoReading": "Aún no estás leyendo ninguno",
+  "homeStartReading": "Empezar a leer",
+  "homeTodayLabel": "hoy",
+  "homeTomorrowLabel": "mañana",
+  "homeInDays": "en {days} días",
+  "@homeInDays": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryEmptyMessage": "Tu biblioteca está vacía. Añade tu primer libro para empezar.",
+  "quickAddBook": "Añadir libro",
+  "statusPending": "Pendiente",
+  "statusWanted": "Deseado",
+  "statusReading": "Leyendo",
+  "statusRead": "Leído",
+  "statusAbandoned": "Abandonado",
+  "statusLabel": "Estado",
+  "statusHistoryTitle": "Historial de estados",
+  "statusHistoryView": "Ver historial de estados",
+  "statusHistoryEmpty": "Aún no hay cambios de estado registrados.",
+  "statusHistoryDeletedAccount": "Cuenta eliminada",
+  "statusHistoryBaseline": "Estado registrado al activar el historial",
+  "statusHistoryDateUpdated": "Fecha del estado actualizada",
+  "eventTypeStart": "Inicio",
+  "eventTypeFinish": "Fin",
+  "eventTypeAbandoned": "Abandono",
+  "eventTypeChapterMilestone": "Hito de capítulo",
+  "eventTypePageMilestone": "Hito de página",
+  "eventTypeDeadline": "Fecha límite",
+  "eventTypeBookReturn": "Devolución de libro",
+  "eventTypeRelease": "Lanzamiento",
+  "actionEdit": "Editar",
+  "actionDelete": "Eliminar",
+  "actionCancel": "Cancelar",
+  "actionSave": "Guardar",
+  "actionConfirm": "Confirmar",
+  "actionMarkCompleted": "¡Completar!",
+  "actionMarkUncompleted": "Reabrir",
+  "actionAddBook": "Añadir libro",
+  "actionAddEvent": "Añadir evento",
+  "actionUpdateProgress": "Actualizar progreso",
+  "progressUpdatedToast": "Progreso actualizado",
+  "actionNotNow": "Ahora no",
+  "actionShare": "Compartir",
+  "bookShareMessage": "Mira {title} en Readendar: {url}",
+  "@bookShareMessage": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "bookShareUnavailable": "Este libro no se puede compartir ahora",
+  "actionReread": "Relectura",
+  "actionSeeMore": "Ver más",
+  "actionApply": "Aplicar",
+  "actionReset": "Restablecer",
+  "reminderAtTime": "En el momento del evento",
+  "reminderMinutesPlural": "{n} min",
+  "@reminderMinutesPlural": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "reminderHoursPlural": "{n} h",
+  "@reminderHoursPlural": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "reminderDaysPlural": "{n, plural, one{{n} día} other{{n} días}}",
+  "@reminderDaysPlural": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "reminderWeeksPlural": "{n, plural, one{{n} semana} other{{n} semanas}}",
+  "@reminderWeeksPlural": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "sourceCamera": "Cámara",
+  "sourceGallery": "Galería",
+  "profileDisplayName": "Nombre visible",
+  "settingsAppBehaviorTitle": "Comportamiento",
+  "@settingsAppBehaviorTitle": {
+    "description": "Settings nav row + screen title for app behavior preferences"
+  },
+  "settingsAppBehaviorSubtitle": "Automatizaciones y preferencias de la app",
+  "@settingsAppBehaviorSubtitle": {
+    "description": "Short Settings row description for the app behavior screen"
+  },
+  "settingsAppBehaviorIntro": "Opciones que cambian cómo se comporta Readendar al gestionar tu actividad.",
+  "@settingsAppBehaviorIntro": {
+    "description": "Intro copy at the top of the app behavior settings screen"
+  },
+  "settingsAutoStatusEventsTitle": "Eventos al cambiar estado",
+  "@settingsAutoStatusEventsTitle": {
+    "description": "Settings switch: auto-create start/finish calendar events on status change"
+  },
+  "settingsAutoStatusEventsBulletStart": "Evento de **inicio** al pasar a **Leyendo**.",
+  "@settingsAutoStatusEventsBulletStart": {
+    "description": "First bullet: auto-create start event; **bold** key words"
+  },
+  "settingsAutoStatusEventsBulletFinish": "Evento de **fin** al marcar como **Leído**.",
+  "@settingsAutoStatusEventsBulletFinish": {
+    "description": "Second bullet: auto-create finish event; **bold** key words"
+  },
+  "profileAppearance": "Apariencia",
+  "profileNotifications": "Notificaciones",
+  "profileEditAction": "Editar perfil",
+  "profileEditTitle": "Editar perfil",
+  "profileTimezone": "Zona horaria",
+  "profileChooseTimezone": "Elegir zona horaria",
+  "profileSearchTimezone": "Buscar zona horaria",
+  "onboardingConsentLabel": "Acepto los términos de uso y confirmo que he leído la política de privacidad.",
+  "termsUpdateTitle": "Términos actualizados",
+  "termsUpdateDescription": "Revisa los términos y la política de privacidad vigentes antes de continuar.",
+  "termsUpdateAccept": "Aceptar y continuar",
+  "legalTerms": "Términos de uso",
+  "profileSaved": "Cambios guardados",
+  "profileExportData": "Descargar mis datos",
+  "profileExportHint": "Copia local de tus libros, eventos, notas y portadas.",
+  "profileExportInProgress": "Preparando tus datos…",
+  "profileExportTitle": "Exportación de datos de Readendar",
+  "profilePrivacy": "Política de privacidad",
+  "actionRetry": "Reintentar",
+  "actionSearch": "Buscar",
+  "actionClear": "Borrar",
+  "actionClose": "Cerrar",
+  "a11yCompleted": "Completado",
+  "offlineBanner": "Sin conexión: se muestran datos guardados",
+  "onboardingTitle": "Configura el perfil de lectura",
+  "onboardingSubtitle": "Nombre y zona horaria para tu biblioteca.",
+  "onboardingSave": "Guardar y empezar",
+  "appearanceLight": "Claro",
+  "appearanceDark": "Oscuro",
+  "appearanceSystem": "Sistema",
+  "filtersTitle": "Filtros",
+  "filterStatus": "Estado",
+  "filterDate": "Fecha",
+  "filterEventType": "Tipo de evento",
+  "filterCompletion": "Finalización",
+  "filterCompletedOnly": "Solo con finalización",
+  "filterUncompletedOnly": "Solo pendientes",
+  "filterSearchHint": "Buscar en esta página",
+  "filtersClear": "Limpiar filtros",
+  "calendarEventsTitle": "Eventos del mes",
+  "calendarWeekEventsTitle": "Eventos de la semana",
+  "calendarMonthNoEvents": "No hay eventos este mes",
+  "calendarWeekNoEvents": "No hay eventos esta semana",
+  "calendarDayNoEvents": "No hay eventos este día",
+  "calendarViewMonth": "Mes",
+  "calendarViewWeek": "Semana",
+  "calendarViewDay": "Día",
+  "calendarShowMap": "Ver calendario",
+  "calendarShowList": "Ver lista",
+  "errorGeneric": "Algo ha ido mal. Inténtalo de nuevo.",
+  "errorNetwork": "Sin conexión. Revisa la red.",
+  "errorUnauthorized": "Tu sesión ha expirado.",
+  "errorValidation": "Revisa los datos introducidos.",
+  "errorRateLimited": "Demasiadas peticiones. Espera un momento.",
+  "errorRateLimitedSeconds": "{n, plural, one{Demasiados intentos de acceso. Inténtalo de nuevo en 1 segundo.} other{Demasiados intentos de acceso. Inténtalo de nuevo en {n} segundos.}}",
+  "@errorRateLimitedSeconds": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "errorRateLimitedMinutes": "{n, plural, one{Demasiados intentos de acceso. Inténtalo de nuevo en 1 minuto.} other{Demasiados intentos de acceso. Inténtalo de nuevo en {n} minutos.}}",
+  "@errorRateLimitedMinutes": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "errFieldRequired": "Campo requerido.",
+  "errInvalidEmail": "Introduce un correo válido.",
+  "authSignInTitle": "Accede o regístrate",
+  "authSignInSubtitle": "Escribe el correo y enviaremos un código. Si no hay cuenta, se creará al verificarlo.",
+  "authEmail": "Correo electrónico",
+  "authEmailHint": "hola@correo.com",
+  "authSubmitSignIn": "Continuar",
+  "authMagicLinkSent": "Hemos enviado un código a {email}.",
+  "@authMagicLinkSent": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "authMagicLinkInstructions": "Escribe el código del correo o abre el enlace desde este dispositivo.",
+  "authCodeTitle": "Introduce el código",
+  "authCodeSubtitle": "Usa el código enviado a {email}.",
+  "@authCodeSubtitle": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "authCode": "Código",
+  "authCodeHint": "ABC234XY",
+  "authCodeRequired": "Introduce el código.",
+  "authVerifyCode": "Continuar",
+  "authChangeEmail": "Cambiar correo",
+  "authResendCode": "Reenviar código",
+  "authResendCodeCountdown": "Reenviar en {seconds}s",
+  "@authResendCodeCountdown": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "authWaitCountdown": "Espera {time}",
+  "@authWaitCountdown": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "authPasswordlessNote": "El mismo código sirve para entrar o crear la cuenta, según el correo.",
+  "authDevCodeTitle": "Modo dev: código devuelto por el backend.",
+  "authDevCodeAction": "Continuar con este código",
+  "authSignInWithGoogle": "Continuar con Google",
+  "authSignInWithApple": "Continuar con Apple",
+  "magicLinkInvalid": "El enlace de acceso no es válido o ha caducado. Solicita uno nuevo aquí.",
+  "loading": "Cargando…",
+  "retry": "Reintentar",
+  "copied": "En el portapapeles.",
+  "searchTitle": "Buscar libros",
+  "searchHint": "Buscar por título o autor",
+  "searchEmptyHint": "Escribe un título o autor para buscar.",
+  "searchNoResults": "Sin resultados.",
+  "searchSearching": "Buscando libros…",
+  "searchCreateManually": "Añadir manualmente",
+  "searchScanIsbn": "Escanear ISBN",
+  "scanIsbnTooltip": "Escanear ISBN",
+  "scanIsbnTitle": "Escanear código",
+  "scanIsbnInstruction": "Apunta la cámara al código de barras del libro",
+  "scanIsbnTorch": "Flash",
+  "scanIsbnManualEntry": "Introducir ISBN manualmente",
+  "scanIsbnNotABook": "Ese no es un código de barras de libro",
+  "scanIsbnManualHint": "978…",
+  "scanIsbnManualInvalid": "Introduce un ISBN válido.",
+  "scanPermissionTitle": "Se necesita acceso a la cámara",
+  "scanPermissionBody": "Readendar necesita acceso a la cámara para escanear códigos de barras de libros. Puedes activarlo en Ajustes.",
+  "scanPermissionOpenSettings": "Abrir ajustes",
+  "cameraPermissionBody": "Readendar necesita acceso a la cámara para hacer una foto. Puedes activarlo en Ajustes.",
+  "photosPermissionTitle": "Se necesita acceso a las fotos",
+  "photosPermissionBody": "Readendar necesita acceso a tus fotos para buscar libros en una imagen. Puedes activarlo en Ajustes.",
+  "bookDetailTitle": "Detalle",
+  "bookEditInfo": "Editar libro",
+  "bookConfirmDelete": "¿Eliminar este libro de la biblioteca?",
+  "bookDeleteSuccess": "Libro eliminado de tu biblioteca",
+  "rereadConfirmTitle": "¿Quieres releerlo?",
+  "rereadConfirmBody": "Añadiremos una copia nueva a Pendientes con la misma información del libro. Empezarás de cero: el progreso y los eventos se quedan en el original.",
+  "bookTitleRequired": "Añade un título.",
+  "bookAuthorsRequired": "Añade al menos un autor.",
+  "bookPagesInvalid": "Introduce un número de páginas válido.",
+  "bookOptionalHint": "Opcional",
+  "rereadSuccess": "Relectura: «{title}»",
+  "@rereadSuccess": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "metaTitle": "Título",
+  "metaAuthors": "Autor",
+  "metaAuthorsHint": "Separar nombres con comas",
+  "metaIsbn": "ISBN",
+  "metaPublisher": "Editorial",
+  "metaLanguage": "Idioma",
+  "bookLanguageName": "{language, select, es{Español} ca{Catalán} en{Inglés} fr{Francés} de{Alemán} it{Italiano} pt{Portugués} nl{Neerlandés} pl{Polaco} tr{Turco} sv{Sueco} da{Danés} nb{Noruego bokmål} fi{Finés} eu{Euskera} gl{Gallego} ru{Ruso} uk{Ucraniano} be{Bielorruso} cs{Checo} sk{Eslovaco} hu{Húngaro} ro{Rumano} bg{Búlgaro} hr{Croata} sr{Serbio} sl{Esloveno} mk{Macedonio} sq{Albanés} et{Estonio} lt{Lituano} lv{Letón} el{Griego} la{Latín} is{Islandés} ga{Irlandés} cy{Galés} ja{Japonés} zh{Chino} ko{Coreano} ar{Árabe} he{Hebreo} hi{Hindi} bn{Bengalí} ur{Urdu} fa{Persa} th{Tailandés} vi{Vietnamita} id{Indonesio} ms{Malayo} ta{Tamil} tl{Filipino} sw{Suajili} af{Afrikáans} eo{Esperanto} ka{Georgiano} hy{Armenio} mn{Mongol} other{{language}}}",
+  "@bookLanguageName": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "metaFormat": "Formato",
+  "bookFormatPhysical": "Físico",
+  "bookFormatEbook": "Ebook",
+  "bookFormatAudiobook": "Audiolibro",
+  "bookFormatOther": "Otro",
+  "metaCategories": "Categorías",
+  "metaEdition": "Edición",
+  "metaBinding": "Encuadernación",
+  "bookBindingName": "{binding, select, hardcover{Tapa dura} paperback{Tapa blanda} massMarket{Bolsillo} tradePaperback{Rústica} boardBook{Libro de cartón} library{Encuadernación de biblioteca} turtleback{Turtleback} spiral{Espiral} leather{Piel} imitationLeather{Piel sintética} flexibound{Flexible} looseLeaf{Hojas sueltas} unbound{Sin encuadernar} comic{Cómic} kindle{Kindle} ebook{Ebook} audiobook{Audiolibro} unknownBinding{Encuadernación desconocida} other{{binding}}}",
+  "@bookBindingName": {
+    "placeholders": {
+      "binding": {
+        "type": "String"
+      }
+    }
+  },
+  "metaDimensions": "Dimensiones",
+  "metaMsrp": "Precio de lista",
+  "metaMsrpCurrency": "Moneda",
+  "sectionExcerpt": "Fragmento",
+  "metaPages": "Páginas",
+  "metaChapters": "Capítulos",
+  "metaPagesTotal": "Páginas totales",
+  "metaChaptersTotal": "Capítulos totales",
+  "metaSynopsis": "Sinopsis",
+  "progressCurrentPageLabel": "Página actual",
+  "progressCurrentLabel": "Progreso actual",
+  "bookSectionDetails": "General",
+  "bookSectionTracking": "Seguimiento",
+  "bookSectionMore": "Detalles",
+  "progressTitle": "Progreso",
+  "progressNoData": "Sin progreso registrado",
+  "progressPercentageLabel": "%",
+  "progressPercentageInvalid": "Introduce un porcentaje entre 0 y 100.",
+  "progressChapterLabel": "Capítulo",
+  "progressChapterValue": "Cap. {chapter}",
+  "@progressChapterValue": {
+    "placeholders": {
+      "chapter": {
+        "type": "int"
+      }
+    }
+  },
+  "chapterArbitraryHint": "El capítulo es independiente: no se sincroniza con páginas ni porcentaje.",
+  "chapterDoneTitle": "¡Capítulo completado!",
+  "chapterDonePagePrompt": "¿Quieres actualizar tu página de progreso?",
+  "chapterDoneDontShowAgain": "No volver a mostrar para este libro",
+  "eventCreateTitle": "Nuevo evento",
+  "eventEditTitle": "Editar evento",
+  "eventSectionDetails": "General",
+  "eventSectionSchedule": "Programación",
+  "eventTypeLabel": "Tipo",
+  "eventBookLabel": "Libro",
+  "eventBookPlaceholder": "Selecciona un libro",
+  "eventBookOptionalPlaceholder": "Selecciona un libro (opcional)",
+  "eventDescriptionLabel": "Notas",
+  "eventTargetPageLabel": "Página objetivo",
+  "eventTargetPageRequired": "Añade una página objetivo.",
+  "eventTargetPageInvalid": "Introduce una página válida.",
+  "eventTargetChapterLabel": "Capítulo objetivo",
+  "eventTargetChapterRequired": "Añade un capítulo objetivo.",
+  "eventTargetChapterInvalid": "Introduce un capítulo válido.",
+  "eventAllDayLabel": "Todo el día",
+  "eventBookRequired": "Selecciona un libro.",
+  "eventReminderLabel": "Recordatorio",
+  "reminderOff": "Sin recordatorio",
+  "eventReminderOffsetLabel": "Tiempo antes",
+  "eventMute": "Silenciar",
+  "eventUnmute": "Reactivar",
+  "eventConfirmDelete": "¿Eliminar este evento?",
+  "eventDeleteSuccess": "Evento eliminado",
+  "imagePendingUpload": "La imagen se subirá al guardar.",
+  "coverSearchOption": "Buscar portadas en línea",
+  "coverUploadOption": "Subir una foto",
+  "notifSettingsTitle": "Notificaciones",
+  "notifGlobalLabel": "Notificaciones activas",
+  "notifGlobalSubtitle": "Desactiva para silenciar todos los recordatorios.",
+  "notifDefaultOffsetLabel": "Tiempo por defecto",
+  "notifAllDayHourLabel": "Hora para eventos de día completo",
+  "notifAllDayHourValue": "A las {hour}",
+  "@notifAllDayHourValue": {
+    "placeholders": {
+      "hour": {
+        "type": "String"
+      }
+    }
+  },
+  "notifPermissionHint": "Te pediremos permiso de notificaciones la primera vez que crees un recordatorio.",
+  "notifBgTitle": "Recordatorios con la app cerrada",
+  "notifBgIntro": "Para que los avisos lleguen aunque cierres Readendar, concede estos permisos del sistema.",
+  "notifBgEnableNotifs": "Activar notificaciones",
+  "notifBgExactAlarms": "Permitir alarmas exactas",
+  "notifBgBattery": "Optimización de batería",
+  "notifBgBatteryHint": "Si tu móvil tiene ahorro de batería agresivo, excluye Readendar para que los recordatorios lleguen puntuales.",
+  "notificationChannelName": "Recordatorios de Readendar",
+  "notificationChannelDescription": "Recordatorios de eventos de lectura",
+  "notifTitleStart": "Empezar a leer",
+  "notifTitleFinish": "Terminar el libro",
+  "notifTitleAbandon": "Abandonar la lectura",
+  "notifTitleReachChapter": "Llegar al capítulo {n}",
+  "@notifTitleReachChapter": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "notifTitleReachPage": "Llegar a la página {n}",
+  "@notifTitleReachPage": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "notifTitleDeadline": "Fecha límite de lectura",
+  "notifTitleReturn": "Devolver el libro",
+  "notifTitleRelease": "Lanzamiento de libro",
+  "notifBodyDeadlineTarget": "hasta la pág. {n}",
+  "@notifBodyDeadlineTarget": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "notifActionComplete": "Completar",
+  "notifActionSnooze1h": "Posponer 1 h",
+  "notifActionSnoozeTonight": "Esta noche",
+  "notifActionCompletedSnack": "{n, plural, one{1 recordatorio completado} other{{n} recordatorios completados}}",
+  "@notifActionCompletedSnack": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "shareTitle": "Biblioteca pública",
+  "profileDebugTools": "Herramientas de depuración",
+  "feedbackTitle": "Enviar comentarios",
+  "feedbackProfileHint": "Informa de un error o comparte una idea",
+  "feedbackBadge": "Te escuchamos",
+  "feedbackIntro": "¿Has encontrado un error o tienes una idea? Escribe el mensaje y Enviar abre tu correo hacia hello@readendar.com.",
+  "feedbackKindBug": "Error",
+  "feedbackKindIdea": "Idea",
+  "feedbackKindOther": "Otro",
+  "feedbackMessageLabel": "Tu mensaje",
+  "feedbackMessageHint": "Cuéntanoslo con tus palabras: qué ha pasado, qué esperabas o qué echas en falta. Cuanto más detalle nos des, mejor podremos ayudarte.",
+  "feedbackMessageRequired": "Escribe un mensaje primero.",
+  "feedbackMessageTooShort": "El mensaje debe tener al menos 10 caracteres.",
+  "feedbackDiagnosticsNote": "Incluiremos la versión de la app y algunos datos del dispositivo en el correo.",
+  "feedbackSubmit": "Enviar",
+  "feedbackMailOpenFailed": "No se pudo abrir el correo. Escríbenos a hello@readendar.com.",
+  "feedbackThanksTitle": "¡Gracias!",
+  "feedbackThanksBody": "Si envías el correo, lo leeremos. Gracias por ayudar a mejorar Readendar.",
+  "feedbackThanksDone": "Listo",
+  "debugTitle": "Herramientas de depuración",
+  "debugOpenOnboardingAction": "Ver onboarding",
+  "debugOpenOnboardingHint": "Abre el carrusel de bienvenida para previsualizarlo.",
+  "debugWarning": "Acciones destructivas solo para compilaciones de depuración. No se puede deshacer.",
+  "debugDeleteAllEventsAction": "Borrar todos los eventos",
+  "debugDeleteAllEventsHint": "Elimina todos los eventos de tu calendario.",
+  "debugDeleteAllBooksAction": "Borrar todos los libros",
+  "debugDeleteAllBooksHint": "Elimina todos los libros y sus eventos relacionados.",
+  "debugConfirmEventsTitle": "¿Borrar todos los eventos?",
+  "debugConfirmEventsBody": "Esto elimina permanentemente todos tus eventos. No se puede deshacer.",
+  "debugConfirmBooksTitle": "¿Borrar todos los libros?",
+  "debugConfirmBooksBody": "Esto elimina permanentemente todos los libros y sus eventos. No se puede deshacer.",
+  "debugDeletedEvents": "{count, plural, one{{count} evento borrado} other{{count} eventos borrados}}",
+  "@debugDeletedEvents": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "debugDeletedBooks": "{count, plural, one{{count} libro borrado} other{{count} libros borrados}}",
+  "@debugDeletedBooks": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "debugSeedLocalAction": "Cargar datos de prueba",
+  "debugSeedLocalHint": "Vacía la base de datos local y la rellena con libros, valoraciones, anotaciones, progresos y eventos de todos los tipos.",
+  "debugSeedLocalConfirmTitle": "¿Sustituir los datos locales?",
+  "debugSeedLocalConfirmBody": "Se borra lo que haya en el dispositivo y se carga un conjunto de prueba. No se puede deshacer.",
+  "debugSeedLocalSuccess": "Datos de prueba listos: {books} libros y {events} eventos.",
+  "debugRestoreCloudImportAction": "Restaurar token de importación",
+  "debugRestoreCloudImportHint": "Temporal. Pide un JWT de la cuenta de importación de depuración al backend local y vuelve a mostrar el aviso y la tarjeta de descargar datos.",
+  "debugRestoreCloudImportSuccess": "Token restaurado. Se muestra el aviso de descarga.",
+  "debugRestoreCloudImportMissing": "No se ha podido emitir el token. Reinicia el API local en modo dev.",
+  "@debugSeedLocalSuccess": {
+    "placeholders": {
+      "books": {
+        "type": "int"
+      },
+      "events": {
+        "type": "int"
+      }
+    }
+  },
+  "debugNotifPreviewTitle": "Vista previa de notificaciones",
+  "debugNotifPreviewIntro": "Toca un tipo para lanzarlo ahora y míralo en la bandeja del sistema o la pantalla de bloqueo.",
+  "debugNotifPreviewFireAll": "Enviar todas",
+  "debugNotifPreviewSent": "Enviada a la bandeja",
+  "debugScheduledRemindersAction": "Recordatorios programados",
+  "debugScheduledRemindersHint": "Lista los recordatorios en cola para los próximos 2 días y lanza cualquiera ahora.",
+  "debugScheduledRemindersTitle": "Recordatorios programados",
+  "debugScheduledRemindersIntro": "Recordatorios en cola para los próximos 2 días. Toca uno para lanzar su notificación exacta ahora.",
+  "debugScheduledRemindersEmpty": "No hay recordatorios en los próximos 2 días.",
+  "debugScheduledRemindersNoBook": "Sin libro",
+  "celebrationTitle": "¡Lo has terminado!",
+  "celebrationRoulette": "Ruleta de lectura",
+  "celebrationShare": "Compartir",
+  "celebrationRatePrompt": "¿Cómo lo valorarías?",
+  "celebrationShareMessage": "¡Acabo de terminar de leer «{title}» en Readendar 📚\nhttps://readendar.com",
+  "@celebrationShareMessage": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "celebrationDaysMetric": "{count, plural, =0{Terminado en menos de un día} one{Terminado en 1 día} other{Terminado en {count} días}}",
+  "@celebrationDaysMetric": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "celebrationPagesMetric": "{count, plural, one{1 página leída} other{{count} páginas leídas}}",
+  "@celebrationPagesMetric": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "celebrationSessionsMetric": "{count, plural, one{1 sesión de lectura} other{{count} sesiones de lectura}}",
+  "@celebrationSessionsMetric": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeActionAddBook": "Añadir\nlibro",
+  "homeActionAddEvent": "Añadir\nevento",
+  "homeActionRoulette": "Ruleta\nlibros",
+  "rouletteEntry": "Ruleta de libros",
+  "rouletteTitle": "¡Gira la ruleta!",
+  "rouletteEmptyMessage": "Añade libros en Leyendo, Pendiente o Deseado y la ruleta elegirá tu próxima lectura.",
+  "rouletteEmptyFilteredMessage": "Activa Leyendo, Pendiente o Deseado para incluir libros en la ruleta.",
+  "@rouletteEmptyFilteredMessage": {
+    "description": "Empty roulette when eligible books exist but no shelf badges are selected."
+  },
+  "rouletteAddBooks": "Añadir libros",
+  "rouletteSingleMessage": "«{title}» es tu único libro en la ruleta. Añade más o activa más estanterías para girar.",
+  "@rouletteSingleMessage": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "rouletteAddMore": "Añadir más libros",
+  "rouletteSwipeHint": "Desliza para girar",
+  "rouletteWinnerLabel": "Tu próxima lectura",
+  "rouletteOpenBook": "Abrir libro",
+  "rouletteSpinAgain": "Girar de nuevo",
+  "profileImportData": "Importar datos",
+  "profileImportSubtitle": "Trae tu biblioteca desde otras aplicaciones",
+  "profileSectionTools": "Datos y widgets",
+  "libraryEmptyImport": "Importar datos",
+  "importDataTitle": "Importar datos",
+  "importChooseSource": "¿De dónde viene tu biblioteca?",
+  "importGoodreadsSourceName": "Goodreads",
+  "importBookmorySourceName": "Bookmory",
+  "importStoryGraphSourceName": "StoryGraph",
+  "importBabelioSourceName": "Babelio",
+  "importGoodreadsSourceSubtitle": "Selecciona el CSV exportado",
+  "importBookmorySourceSubtitle": "Selecciona un archivo Excel de Bookmory",
+  "importStoryGraphSourceSubtitle": "Selecciona un CSV",
+  "importBabelioSourceSubtitle": "Exporta tu biblioteca y selecciona el CSV",
+  "bookmoryImportTitle": "Importar de Bookmory",
+  "bookmoryImportHeadline": "Trae tu biblioteca de Bookmory",
+  "bookmoryImportBody": "Usa la exportación Excel de Bookmory para añadir tus libros, estados, valoraciones y notas privadas.",
+  "bookmoryImportStep1": "En Bookmory, abre Mi página → Exportar y elige Excel (xlsx). Activa «Incluir notas» si quieres importarlas.",
+  "bookmoryImportStep2": "Pulsa Exportar y selecciona aquí el archivo descargado.",
+  "bookmoryImportPickFile": "Seleccionar archivo Excel",
+  "bookmoryImportInvalidFile": "Esto no parece una exportación Excel válida de Bookmory.",
+  "storygraphImportTitle": "Importar de StoryGraph",
+  "storygraphImportHeadline": "Trae tu biblioteca de StoryGraph",
+  "storygraphImportBody": "Usa la exportación CSV de StoryGraph para añadir tus libros, estados, formatos, valoraciones y reseñas.",
+  "storygraphImportStep1": "En la app de StoryGraph, abre Perfil, toca el menú de arriba a la derecha (☰) y elige Manage Account.",
+  "storygraphImportStep2": "En Manage Your Data, toca Export StoryGraph Library y Generate Export. Cuando StoryGraph te envíe un correo, descarga el CSV y selecciónalo aquí.",
+  "storygraphImportPickFile": "Seleccionar CSV de StoryGraph",
+  "storygraphImportInvalidFile": "Esto no parece una exportación CSV válida de StoryGraph.",
+  "storygraphImportOpenExport": "Abrir exportación de StoryGraph",
+  "storygraphImportOpenError": "No hemos podido abrir StoryGraph. Sigue los pasos en la app de StoryGraph.",
+  "babelioImportTitle": "Importar de Babelio",
+  "babelioImportHeadline": "Trae tu biblioteca de Babelio",
+  "babelioImportBody": "Usa la exportación CSV de Babelio para añadir tus libros, estados y valoraciones.",
+  "babelioImportStep1": "Abre la exportación de Babelio e inicia sesión si te lo pide.",
+  "babelioImportStep2": "Completa la verificación, descarga tu biblioteca con el primer botón y selecciona aquí el CSV.",
+  "babelioImportPickFile": "Seleccionar CSV de Babelio",
+  "babelioImportInvalidFile": "Esto no parece una exportación CSV válida de Babelio.",
+  "babelioImportOpenExport": "Abrir exportación de Babelio",
+  "babelioImportOpenError": "No hemos podido abrir Babelio. Prueba a exportar desde el navegador.",
+  "importSkippedAuthorNote": "{count, plural, one{Se ha omitido 1 fila sin autor} other{Se han omitido {count} filas sin autor}}",
+  "importTitle": "Importar de Goodreads",
+  "importIntroHeadline": "Trae tu biblioteca de Goodreads",
+  "importIntroBody": "Exporta tus libros desde Goodreads y los añadimos a tu biblioteca con sus portadas.",
+  "importIntroStep1": "En un ordenador, abre Goodreads → My Books → Import and export.",
+  "importIntroStep2": "Haz clic en «Export Library» y descarga el archivo CSV.",
+  "importIntroStep3": "Envíate el archivo al móvil y selecciónalo aquí.",
+  "importPickFile": "Seleccionar archivo CSV",
+  "importInvalidFile": "Esto no parece un export de Goodreads.",
+  "importEmptyFile": "No encontramos libros en el archivo.",
+  "importFileTooLarge": "Ese archivo es demasiado grande (máx. 10 MB).",
+  "importBadEncoding": "No pudimos leer la codificación de texto del archivo. Vuelve a exportarlo como CSV en UTF-8 e inténtalo de nuevo.",
+  "importConfirmTitle": "Revisar importación",
+  "importDuplicateInLibrary": "Ya la tienes",
+  "importFound": "{count, plural, one{Hemos encontrado 1 libro} other{Hemos encontrado {count} libros}}",
+  "@importFound": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importDuplicatesNote": "{count, plural, one{Se omitió 1 duplicado del archivo} other{Se omitieron {count} duplicados del archivo}}",
+  "@importDuplicatesNote": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importSkippedNote": "{count, plural, one{Se omitió 1 fila sin título} other{Se omitieron {count} filas sin título}}",
+  "@importSkippedNote": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importUnmatchedNotes": "{count, plural, one{No se pudieron asociar las notas de 1 libro} other{No se pudieron asociar las notas de {count} libros}}",
+  "@importUnmatchedNotes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importTruncatedNote": "Solo se importarán los primeros {max} libros.",
+  "@importTruncatedNote": {
+    "placeholders": {
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "importStart": "{count, plural, one{Importar 1 libro} other{Importar {count} libros}}",
+  "@importStart": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importProgressTitle": "Importando",
+  "importProgressLabel": "{done} de {total}",
+  "@importProgressLabel": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importCancel": "Cancelar",
+  "importCancelling": "Cancelando…",
+  "importProgressSubtitle": "Añadiendo tus libros…",
+  "importCompleteTitle": "¡Importación completada!",
+  "importCancelledTitle": "Importación cancelada",
+  "importCompleteSubtitle": "{count, plural, =0{No se añadió ningún libro} one{Se añadió 1 libro a tu biblioteca} other{Se añadieron {count} libros a tu biblioteca}}",
+  "@importCompleteSubtitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importStatAdded": "Añadidos",
+  "importStatNoCover": "Sin portada",
+  "importStatFailed": "Con error",
+  "importMetadataNote": "Revisa los libros y estados antes de importar. No se importan las fechas, sesiones ni tiempo de lectura.",
+  "importRoundedRatingsNote": "{count, plural, one{Se redondeó 1 valoración de StoryGraph a la media estrella más cercana porque Readendar usa medias estrellas.} other{Se redondearon {count} valoraciones de StoryGraph a la media estrella más cercana porque Readendar usa medias estrellas.}}",
+  "@importRoundedRatingsNote": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importRetryFailed": "{count, plural, one{Reintentar 1 libro} other{Reintentar {count} libros}}",
+  "importImproveCovers": "{count, plural, one{Añadir 1 portada} other{Añadir {count} portadas}}",
+  "@importImproveCovers": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "importGoToLibrary": "Ver biblioteca",
+  "importImproveTitle": "Añadir portadas",
+  "importDone": "Hecho",
+  "importImproveHint": "Estos libros se importaron sin portada. Búscalos para añadirles una.",
+  "importAllCoversDone": "¡Todas las portadas listas!",
+  "importCoverUpdated": "Portada actualizada",
+  "importImproveSearchTitle": "Buscar portada",
+  "importImproveSearchHint": "Título o autor",
+  "statusEmptyReading": "Aún no estás leyendo nada.\n¡Escoge tu próximo libro!",
+  "statusEmptyPending": "Tu lista de pendientes está vacía.\n¡Añade libros que quieras leer!",
+  "statusEmptyWanted": "Tu lista de deseados está vacía.\n¡Añade libros que quieras conseguir!",
+  "statusEmptyRead": "Todavía no has terminado ningún libro.",
+  "statusEmptyAbandoned": "No has abandonado ningún libro.\n¡Sigue así!",
+  "statusEmptyGoToLibrary": "Ir a la biblioteca",
+  "planButton": "Planificar lectura",
+  "planTitle": "Planificar",
+  "planReplanTitle": "Replanificar",
+  "planReplanCta": "Replanificar",
+  "planReplanFromStart": "Cambiar opciones",
+  "planReplanNothing": "No hay eventos pendientes para replanificar.",
+  "planProgressAheadTitle": "¿Está actualizado tu progreso de lectura?",
+  "planProgressAheadMessage": "Tu progreso registrado es {currentPage}. Actualízalo para que el nuevo plan empiece donde estás de verdad.",
+  "@planProgressAheadMessage": {
+    "placeholders": {
+      "currentPage": {
+        "type": "int"
+      }
+    }
+  },
+  "planProgressAheadAction": "Actualizar progreso",
+  "planModePace": "Meta diaria",
+  "planModeDeadline": "Terminar en una fecha",
+  "planUnitPages": "Páginas",
+  "planUnitChapters": "Capítulos",
+  "planStart": "Inicio",
+  "planDeadline": "Fecha fin",
+  "planPace": "Ritmo",
+  "planPerDayPages": "pág/día",
+  "planPerDayChapters": "cap/día",
+  "planTotalPages": "Total de páginas",
+  "planTotalChapters": "Total de capítulos",
+  "planReadingDays": "Días de lectura",
+  "planReminders": "Recordatorios",
+  "planRemindersHelp": "Usa la hora de recordatorio predeterminada de Ajustes.",
+  "planReset": "Reiniciar",
+  "planNeedChapters": "Introduce el total de capítulos para ver tu plan.",
+  "planNeedPages": "Añade el número de páginas del libro para planificar.",
+  "planAdjustHint": "Ajusta los criterios para ver tu plan.",
+  "planIssueNothingToRead": "Ya has alcanzado el total: no queda nada por planificar.",
+  "planIssueInvalidPace": "Introduce un ritmo de al menos 1 por día.",
+  "planIssueInvalidRange": "La fecha límite debe ser igual o posterior a la de inicio.",
+  "planIssueNoReadingDays": "Has excluido todos los días de lectura.",
+  "planStartInPast": "La fecha de inicio es anterior a hoy.",
+  "planPaceAggressive": "Es un ritmo exigente.",
+  "planWeekdayToggleHint": "Toca para incluir o excluir este día.",
+  "planCalendarTapHint": "Toca un día para excluirlo o restaurarlo.",
+  "planDerivedFinish": "Terminas ≈ {date} · {days, plural, one{1 día de lectura} other{{days} días de lectura}}",
+  "@planDerivedFinish": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "planDerivedPace": "Ritmo necesario: ≈ {pace} {unit}",
+  "@planDerivedPace": {
+    "placeholders": {
+      "pace": {
+        "type": "int"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "planTooMany": "Demasiados eventos ({count}). Aumenta el ritmo o acorta el rango.",
+  "@planTooMany": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "planManyWarning": "Plan extenso. {count} eventos.",
+  "@planManyWarning": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "planEventsCount": "{count, plural, one{1 evento} other{{count} eventos}}",
+  "@planEventsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "planRange": "{start} - {end}",
+  "@planRange": {
+    "placeholders": {
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "planMilestonePage": "Página {n}",
+  "@planMilestonePage": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "planMilestoneChapter": "Capítulo {n}",
+  "@planMilestoneChapter": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "planEventStart": "Empezar la lectura",
+  "planEventFinish": "Terminar el libro",
+  "planEventDeadline": "Fecha fin de lectura",
+  "planCreate": "Crear",
+  "planUpdate": "Actualizar",
+  "planUpdateConfirmTitle": "Actualizar plan",
+  "planUpdateConfirmMessage": "{count, plural, one{Se actualizará 1 evento} other{Se actualizarán {count} eventos}} entre el {start} y el {end}.",
+  "@planUpdateConfirmMessage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "planUpdateProgressTitle": "Actualizando el plan",
+  "planUpdateCompleteTitle": "¡Plan actualizado!",
+  "planUpdateFailed": "No se pudo actualizar el plan.",
+  "planConfirmTitle": "Crear plan",
+  "planConfirmMessage": "{count, plural, one{Se creará 1 evento} other{Se crearán {count} eventos}} entre el {start} y el {end}.",
+  "@planConfirmMessage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "start": {
+        "type": "String"
+      },
+      "end": {
+        "type": "String"
+      }
+    }
+  },
+  "planConfirmOverlap": "{count, plural, one{Este libro ya tiene 1 evento en este periodo.} other{Este libro ya tiene {count} eventos en este periodo.}}",
+  "@planConfirmOverlap": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "planConfirmMarkReading": "Marcar como leyendo",
+  "planProgressTitle": "Creando el plan",
+  "planRollingBack": "Deshaciendo…",
+  "planFailed": "No se pudo crear el plan.",
+  "planCompleteTitle": "¡Plan creado!",
+  "planViewInCalendar": "Ver en el calendario",
+  "planListView": "Lista",
+  "planCalendarView": "Calendario",
+  "planPreviewHint": "Pulsa “Calcular eventos” o “Recalcular desde cero” para ver tu plan.",
+  "planAlreadyReadChapters": "Capítulos leídos",
+  "planAlreadyReadPages": "Páginas leídas",
+  "planSectionSchedule": "Fechas y ritmo",
+  "planSectionBookends": "Eventos y avisos",
+  "planIncludeStart": "Añadir evento de inicio",
+  "planIncludeFinish": "Añadir evento de fin",
+  "planIncludeDeadline": "Añadir evento de fecha fin",
+  "planExclusionsBlocked": "Estas exclusiones rompen el plan",
+  "planExclusionsTight": "Los días excluidos hacen el ritmo más exigente de lo previsto.",
+  "planAdvicePending": "Completa los campos para ver tu estimación.",
+  "planRemovedDay": "Sin lectura",
+  "planHistoryViewLink": "Ver planificaciones pasadas",
+  "planHistoryTitle": "Planificaciones pasadas",
+  "planHistoryEmpty": "Aún no hay planificaciones para este libro.",
+  "planHistorySummaryPace": "Meta diaria",
+  "planHistorySummaryDeadline": "Terminar en una fecha",
+  "planHistoryPerDayPages": "{count} pág/día",
+  "@planHistoryPerDayPages": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "planHistoryPerDayChapters": "{count} cap/día",
+  "@planHistoryPerDayChapters": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "planUndo": "Deshacer",
+  "planUndoConfirmTitle": "¿Deshacer este plan?",
+  "planUndoConfirmMessage": "Se borrarán los eventos que creó este plan y que aún existen. Los que ya hayas eliminado o completado no se ven afectados.",
+  "planUndone": "{count, plural, =0{No se borró ningún evento} one{Se ha borrado 1 evento del plan} other{Se han borrado {count} eventos del plan}}",
+  "@planUndone": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "planUndoFailed": "No se pudo deshacer el plan.",
+  "planConfirmReassurance": "No te preocupes: podrás deshacerlo cuando quieras.",
+  "planUndoCreated": "Deshacer este plan",
+  "myStatsTitle": "Métricas",
+  "myStatsSummary": "Resumen",
+  "myStatsReadingSince": "Leyendo desde {date}",
+  "@myStatsReadingSince": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "myStatsBooksRead": "Leídos",
+  "myStatsBooksReading": "Leyendo",
+  "myStatsBooksQueued": "Por leer",
+  "myStatsBooksWanted": "Deseados",
+  "myStatsBooksAbandoned": "Abandonados",
+  "myStatsActivity": "Actividad",
+  "myStatsTaste": "Gustos",
+  "myStatsFinished30": "Acabados (30d)",
+  "myStatsFinishedYear": "Leídos",
+  "myStatsAdded30": "Añadidos (30d)",
+  "myStatsCurrentStreak": "Racha actual",
+  "myStatsLongestStreak": "Mejor racha",
+  "myStatsBestMonth": "Mejor mes",
+  "myStatsFinishedChart": "Libros acabados por mes",
+  "myStatsPagesPreview": "{pages} págs.",
+  "@myStatsPagesPreview": {
+    "placeholders": {
+      "pages": {
+        "type": "int"
+      }
+    }
+  },
+  "myStatsGranularityWeek": "Semana",
+  "myStatsGranularityMonth": "Mes",
+  "myStatsGranularityYear": "Año",
+  "myStatsGranularityAll": "Todo",
+  "myStatsPreviousPeriod": "Periodo anterior",
+  "myStatsNextPeriod": "Periodo siguiente",
+  "myStatsPagesInRange": "Páginas",
+  "myStatsPageActivityUnavailable": "La actividad de páginas no está disponible con esta versión del servidor.",
+  "myStatsPageChart": "Páginas leídas",
+  "myStatsUnitPagesPerDay": "págs./día",
+  "myStatsUnitPagesPerMonth": "págs./mes",
+  "myStatsUnitPagesPerYear": "págs./año",
+  "myStatsReadingDays": "Días de lectura",
+  "myStatsNoTaste": "Aún no hay suficiente historial de lectura.",
+  "myStatsAvgRating": "Valoración media",
+  "myStatsTopGenres": "Tus géneros",
+  "myStatsUnitMonths": "meses",
+  "widgetAddToHome": "Añadir a la pantalla de inicio",
+  "widgetHowToTitle": "Añade el widget de Readendar",
+  "widgetHowToIos": "Mantén pulsada la pantalla de inicio, toca el + de la esquina, busca «Readendar», elige un tamaño y añádelo.",
+  "widgetHowToAndroid": "Mantén pulsada la pantalla de inicio, toca Widgets, busca Readendar y arrastra un tamaño a la pantalla.",
+  "widgetPreviewEmptyEvents": "No hay eventos próximos",
+  "widgetSeeMore": "Ver más en el calendario",
+  "widgetPreviewError": "No se pudo actualizar",
+  "widgetPinnedToast": "Widget añadido a la pantalla de inicio",
+  "widgetsTitle": "Widgets",
+  "widgetsRowSubtitle": "Lecturas, eventos y citas en tu pantalla de inicio",
+  "widgetsIntro": "Añade widgets a tu pantalla de inicio para tener Readendar siempre a mano.",
+  "widgetEventsTitle": "Próximos eventos",
+  "quotesTitle": "Citas",
+  "quotesSearchHint": "Buscar en tus citas…",
+  "quoteAdd": "Añadir cita",
+  "quotePageAbbrev": "p. {n}",
+  "quoteChapterAbbrev": "cap. {n}",
+  "quoteComposerPageLabel": "Página",
+  "quoteComposerChapterLabel": "Capítulo",
+  "quoteComposerNoteLabel": "Nota privada",
+  "quoteComposerNoteHint": "Añade una nota personal…",
+  "quoteShareIncludeNote": "Incluir mi nota",
+  "quoteShareIncludeNoteHint": "Tu nota privada aparecerá en lo que compartas.",
+  "quotesWidgetShowNote": "Mostrar nota",
+  "quotesWidgetShowNoteHint": "Muestra tu nota privada en el widget cuando la cita tenga una.",
+  "quoteBookPickerTitle": "¿De qué libro es la cita?",
+  "quoteBookPickerFilterHint": "Buscar en tu biblioteca…",
+  "quoteBookPickerCreate": "Crear libro",
+  "homeActionAddQuote": "Anotación",
+  "quotesCardTitle": "Citas",
+  "annotationsTitle": "Anotaciones",
+  "annotationsCardTitle": "Anotaciones",
+  "annotationsEmptyMessage": "Aún no se ha añadido ninguna anotación.",
+  "annotationsSearchHint": "Buscar en tus anotaciones…",
+  "annotationCategoryNote": "Notas",
+  "annotationCategoryTheory": "Teoría",
+  "annotationCategoryQuestion": "Preguntas",
+  "annotationCategoryQuote": "Citas",
+  "annotationPin": "Fijar",
+  "annotationUnpin": "Quitar fijado",
+  "annotationPinLimit": "Puedes fijar hasta 3 anotaciones por libro.",
+  "annotationSpoiler": "Contiene spoilers",
+  "annotationFavorite": "Favorita",
+  "annotationUnfavorite": "Quitar de favoritas",
+  "annotationAdd": "Añadir anotación",
+  "annotationAddNote": "Añadir nota",
+  "annotationAddQuote": "Añadir cita",
+  "annotationAddTheory": "Añadir teoría",
+  "annotationAddQuestion": "Añadir pregunta",
+  "annotationFilterCategories": "Categorías",
+  "annotationFilterFavorites": "Favoritas",
+  "annotationsFilterEmpty": "Ninguna anotación coincide con estos filtros.",
+  "annotationConfigTitle": "Configuración",
+  "annotationDeleteConfirmTitle": "¿Eliminar esta anotación?",
+  "annotationDeleteConfirmMessage": "La anotación se eliminará definitivamente.",
+  "annotationCreated": "Anotación guardada",
+  "annotationComposerTitleNew": "Nueva anotación",
+  "annotationComposerTitleEdit": "Editar",
+  "annotationComposerTextHint": "Escribe la anotación…",
+  "annotationActionsTooltip": "Acciones de la anotación",
+  "quotesCount": "{count, plural, one{1 cita} other{{count} citas}}",
+  "@quotePageAbbrev": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "@quoteChapterAbbrev": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "@quotesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "quoteQuickActionTitle": "Nueva anotación",
+  "quoteOcrTooltip": "Escanear con la cámara",
+  "quoteOcrTitle": "Selecciona las líneas",
+  "quoteOcrInstructions": "Toca las líneas que forman la cita (mantén pulsado y arrastra para varias).",
+  "quoteOcrUseText": "Usar texto",
+  "quoteOcrNoText": "No se reconoció texto en la foto.",
+  "quoteOcrSelectAll": "Seleccionar todo",
+  "quoteOcrClearSelection": "Limpiar selección",
+  "quoteVoiceTooltip": "Dictar por voz",
+  "quoteVoiceStopTooltip": "Detener dictado",
+  "quoteVoiceListening": "Escuchando…",
+  "quoteVoiceUnavailable": "El dictado por voz no está disponible en este dispositivo.",
+  "quoteVoiceLocaleFallback": "Tu idioma no está disponible para dictado; se usará el idioma del sistema.",
+  "quoteVoicePermissionTitle": "Se necesita acceso al micrófono",
+  "quoteVoicePermissionBody": "Readendar necesita acceso al micrófono para dictar citas. Puedes activarlo en Ajustes.",
+  "quoteShareTitle": "Compartir cita",
+  "quoteShareTitleNote": "Compartir nota",
+  "quoteShareTitleTheory": "Compartir teoría",
+  "quoteShareTitleQuestion": "Compartir pregunta",
+  "quoteShareImage": "Imagen",
+  "quoteShareText": "Texto",
+  "quotesWidgetPreviewEmpty": "Añade tu primera cita",
+  "quotesWidgetConfigTitle": "Widget de citas",
+  "quotesWidgetConfigMode": "Qué mostrar",
+  "quotesWidgetConfigStyle": "Aspecto",
+  "quotesWidgetModeAll": "Todas las citas",
+  "quotesWidgetModeFavorites": "Favoritas",
+  "quotesWidgetModeBook": "Un libro",
+  "quotesWidgetModeFixed": "Una cita fija",
+  "quotesWidgetConfigCadence": "Intervalo de rotación",
+  "quotesWidgetCadenceHourly": "Cada hora",
+  "quotesWidgetCadence6h": "Cada 6 horas",
+  "quotesWidgetCadenceDaily": "Cada día",
+  "quotesWidgetPickBook": "Elegir el libro",
+  "quotesWidgetPickQuote": "Elegir la cita",
+  "quotesWidgetConfigAdd": "Añadir widget",
+  "quotesWidgetConfigNeedQuotes": "Añade una cita primero para configurar el widget.",
+  "quotesWidgetConfigEditTitle": "Editar widget",
+  "quotesWidgetUpdatedToast": "Widget actualizado",
+  "kindleImportTitle": "Importar de Kindle",
+  "kindleImportIntro": "Importa tus subrayados de Kindle: conecta el Kindle al ordenador o usa la app, y elige el archivo «My Clippings.txt».",
+  "kindleImportPick": "Elegir archivo",
+  "kindleImportInvalidFile": "No se pudo leer el archivo.",
+  "kindleImportNoHighlights": "No se encontraron subrayados en el archivo.",
+  "kindleImportGroups": "{count, plural, one{1 libro con subrayados} other{{count} libros con subrayados}}",
+  "kindleImportSkipped": "{count, plural, one{1 nota/marcador omitido} other{{count} notas/marcadores omitidos}}",
+  "kindleImportDuplicates": "{count, plural, one{1 duplicado} other{{count} duplicados}}",
+  "kindleImportUnmatched": "Sin libro en tu biblioteca. Toca para elegirlo",
+  "kindleImportSuggested": "Sugerido",
+  "kindleImportStart": "{count, plural, =0{Importar} one{Importar 1 cita} other{Importar {count} citas}}",
+  "kindleImportProgress": "Importando citas…",
+  "kindleImportDone": "{count, plural, one{¡1 cita importada!} other{¡{count} citas importadas!}}",
+  "kindleImportFailed": "{count, plural, one{1 cita falló} other{{count} citas fallaron}}",
+  "kindleImportContinue": "Continuar",
+  "kindleImportReviewTitle": "Revisa las citas",
+  "kindleImportReviewSubtitle": "Desmarca las que no quieras importar.",
+  "kindleImportSelectAll": "Seleccionar todas",
+  "kindleImportGoToQuotes": "Ir a mis anotaciones",
+  "kindleImportRetry": "Volver a intentar",
+  "kindleImportErrorTitle": "No se pudieron importar las citas.",
+  "@kindleImportGroups": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@kindleImportSkipped": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@kindleImportDuplicates": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@kindleImportStart": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@kindleImportDone": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "@kindleImportFailed": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "quoteDailyNotifTitle": "Tu cita del día 📖",
+  "quoteDailySettingTitle": "Cita del día",
+  "quoteDailySettingSubtitle": "Una notificación diaria con una cita de tus libros.",
+  "quoteDailyHourLabel": "Hora de la cita del día",
+  "timeJustNow": "hace un momento",
+  "timeMinutesAgo": "hace {minutes} min",
+  "@timeMinutesAgo": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "timeHoursAgo": "hace {hours} h",
+  "@timeHoursAgo": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      }
+    }
+  },
+  "timeDaysAgo": "hace {days} d",
+  "@timeDaysAgo": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "storeReviewTitle": "¿Te está gustando Readendar?",
+  "@storeReviewTitle": {
+    "description": "Title of the soft in-app store review modal"
+  },
+  "storeReviewBody": "Una reseña breve ayuda a otros lectores a encontrarnos.",
+  "@storeReviewBody": {
+    "description": "Short body copy for the soft store review modal"
+  },
+  "storeReviewCtaAppStore": "Valorar en App Store",
+  "@storeReviewCtaAppStore": {
+    "description": "CTA that opens the Apple App Store listing"
+  },
+  "storeReviewCtaPlayStore": "Valorar en Google Play",
+  "@storeReviewCtaPlayStore": {
+    "description": "CTA that opens the Google Play listing"
+  },
+  "storeReviewNotNow": "Ahora no",
+  "@storeReviewNotNow": {
+    "description": "Dismiss the soft store review modal"
+  },
+  "storeReviewSettingsRow": "¿Nos echas una mano?",
+  "@storeReviewSettingsRow": {
+    "description": "Friendly profile invite title asking for a store review (soft, not imperative)"
+  },
+  "storeReviewSettingsHint": "Si te gusta, una reseñita en la tienda ayuda mucho.",
+  "@storeReviewSettingsHint": {
+    "description": "Short friendly profile invite body for leaving a store review"
+  },
+  "storeReviewOpenFailed": "No se pudo abrir la tienda. Inténtalo de nuevo.",
+  "@storeReviewOpenFailed": {
+    "description": "Snackbar when the store listing URL fails to open"
+  },
+  "productFeedbackTitle": "¿Cómo va Readendar?",
+  "@productFeedbackTitle": {
+    "description": "Title of the soft in-app feedback modal"
+  },
+  "productFeedbackBody": "Si algo falla, no encaja o echas de menos una pieza en cualquier parte de la app, cuéntanoslo. Lo leemos todo.",
+  "@productFeedbackBody": {
+    "description": "Body inviting useful feedback about the whole app"
+  },
+  "productFeedbackCta": "Enviar feedback",
+  "@productFeedbackCta": {
+    "description": "Primary CTA that opens the in-app feedback form"
+  },
+  "productFeedbackNotNow": "Ahora no",
+  "@productFeedbackNotNow": {
+    "description": "Dismiss action for the in-app feedback modal"
+  },
+  "appUpdateTitle": "Actualización disponible",
+  "@appUpdateTitle": {
+    "description": "Title of the in-app store update prompt"
+  },
+  "appUpdateBody": "Hay una versión nueva de Readendar en la tienda.",
+  "@appUpdateBody": {
+    "description": "Generic body when store What's New is missing"
+  },
+  "appUpdateCta": "Actualizar",
+  "@appUpdateCta": {
+    "description": "Primary button that opens the store listing"
+  },
+  "appUpdateLater": "Más tarde",
+  "@appUpdateLater": {
+    "description": "Dismiss the store update prompt until a newer version"
+  },
+  "debugStoreReviewHint": "Muestra el modal de valoración de la tienda sin guardar preferencias (solo vista previa).",
+  "@debugStoreReviewHint": {
+    "description": "Debug tools hint for previewing the store review modal"
+  },
+  "debugStoreReviewAction": "Previsualizar modal de valoración",
+  "@debugStoreReviewAction": {
+    "description": "Debug tools button to open the store review modal preview"
+  },
+  "debugProductFeedbackHint": "Muestra el modal de feedback sin guardar preferencias (solo vista previa).",
+  "@debugProductFeedbackHint": {
+    "description": "Debug Tools: hint for in-app feedback modal preview"
+  },
+  "debugProductFeedbackAction": "Previsualizar modal de feedback",
+  "@debugProductFeedbackAction": {
+    "description": "Debug Tools: button to preview the in-app feedback modal"
+  },
+  "debugAppUpdateHint": "Muestra el aviso de actualización sin posponer ni consultar la tienda (solo vista previa).",
+  "@debugAppUpdateHint": {
+    "description": "Debug tools hint for previewing the in-app update prompt"
+  },
+  "debugAppUpdateAction": "Previsualizar actualización con novedades",
+  "@debugAppUpdateAction": {
+    "description": "Debug tools button to preview the update prompt with What's New notes"
+  },
+  "debugAppUpdateGenericAction": "Previsualizar actualización genérica",
+  "@debugAppUpdateGenericAction": {
+    "description": "Debug tools button to preview the update prompt with generic body copy"
+  },
+  "debugAppUpdateSampleNotes": "Novedades de esta versión\n\n• Widgets de inicio\n• Listas de biblioteca más rápidas",
+  "@debugAppUpdateSampleNotes": {
+    "description": "Sample What's New body used by the debug update-prompt preview"
+  },
+  "debugArchetypePreviewHint": "Muestra las 15 tarjetas de arquetipo del capítulo lector con el diseño real.",
+  "@debugArchetypePreviewHint": {
+    "description": "Debug tools hint for the Reading Chapter archetype gallery"
+  },
+  "debugArchetypePreviewAction": "Ver arquetipos lectores",
+  "@debugArchetypePreviewAction": {
+    "description": "Debug tools button that opens the archetype card gallery"
+  },
+  "debugArchetypePreviewTitle": "Arquetipos lectores",
+  "@debugArchetypePreviewTitle": {
+    "description": "App bar title for the debug archetype gallery"
+  },
+  "debugArchetypePreviewIntro": "Las 15 combinaciones de gusto, ritmo, novedad y escala, con el mismo cromo invertido que el capítulo anual.",
+  "@debugArchetypePreviewIntro": {
+    "description": "Intro copy above the debug archetype gallery"
+  },
+  "shortcutLogProgressTitle": "Registrar progreso",
+  "shortcutWhatsNextTitle": "Qué toca leer",
+  "bookCreateActions": "Añadir",
+  "planWizardBack": "Atrás",
+  "planWizardContinue": "Continuar",
+  "planWizardStepOf": "Paso {step} de {total}",
+  "planWizardGoalTitle": "¿Cómo quieres planificar?",
+  "planModePaceSubtitle": "Elige cuánto leer cada día. Calculamos cuándo terminas",
+  "planModeDeadlineSubtitle": "Elige una fecha de fin. Calculamos cuánto leer al día",
+  "planModeBeforeEvent": "Antes de un evento",
+  "planModeBeforeEventSubtitle": "Elige algo de tu calendario. Planificamos terminar ese día",
+  "planHistorySummaryBeforeEvent": "Antes de un evento",
+  "planUntilHere": "Planificar hasta aquí",
+  "planUntilHerePastHint": "Elige un evento de hoy o futuro.",
+  "planPickEventTitle": "Elige un evento",
+  "planPickEventHint": "Toca un evento y luego Planificar hasta aquí. Los días vacíos no se pueden elegir.",
+  "planPickEventEmptyDay": "No hay eventos este día. Elige un día que tenga alguno.",
+  "planPickEventEmptyMonth": "No hay eventos este mes. Prueba otro mes.",
+  "planPickEventCta": "Elegir del calendario",
+  "planAnchorEvent": "Terminar para el evento",
+  "planCalcNeedsEvent": "Elige un evento del calendario como meta.",
+  "planSectionBook": "Libro",
+  "@planWizardStepOf": {
+    "description": "Wizard progress label",
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "planCalcNeedsFields": "Completa los campos obligatorios para calcular.",
+  "planPickDate": "Elige una fecha",
+  "bookCoverEnlarge": "Ver portada",
+  "bookCategoryAdventure": "Aventuras",
+  "bookCategoryArtsEntertainment": "Arte y entretenimiento",
+  "bookCategoryBiographyMemoir": "Biografía y memorias",
+  "bookCategoryBusinessEconomics": "Negocios y economía",
+  "bookCategoryChildrenYoungAdult": "Infantil y juvenil",
+  "bookCategoryComicsManga": "Cómics y manga",
+  "bookCategoryEducationReference": "Educación y referencia",
+  "bookCategoryFantasy": "Fantasía",
+  "bookCategoryFiction": "Ficción",
+  "bookCategoryHealthWellness": "Salud y bienestar",
+  "bookCategoryHistoricalFiction": "Ficción histórica",
+  "bookCategoryHistory": "Historia",
+  "bookCategoryHorrorParanormal": "Terror y paranormal",
+  "bookCategoryHumorSatire": "Humor y sátira",
+  "bookCategoryLifestyleLeisure": "Estilo de vida y ocio",
+  "bookCategoryLiteraryClassics": "Ficción literaria y clásicos",
+  "bookCategoryMysteryCrime": "Misterio y crimen",
+  "bookCategoryNonfiction": "No ficción",
+  "bookCategoryOther": "Otros",
+  "bookCategoryPhilosophy": "Filosofía",
+  "bookCategoryPoetryDrama": "Poesía y teatro",
+  "bookCategoryPoliticsSociety": "Política y sociedad",
+  "bookCategoryPsychology": "Psicología",
+  "bookCategoryReligionSpirituality": "Religión y espiritualidad",
+  "bookCategoryRomance": "Romance",
+  "bookCategoryScienceFiction": "Ciencia ficción",
+  "bookCategoryScienceNature": "Ciencia y naturaleza",
+  "bookCategorySelfHelp": "Autoayuda",
+  "bookCategoryTechnology": "Tecnología",
+  "bookCategoryThriller": "Thriller",
+  "eventReminderCannotFire": "Este recordatorio no puede avisarte porque su hora ya pasó. Elige una fecha posterior o un aviso más corto.",
+  "myStatsActiveDays": "Días activos",
+  "myStatsAllTime": "Histórico",
+  "myStatsAverage": "Media",
+  "myStatsBooksSeries": "Libros",
+  "myStatsComparedPreviousYear": "Frente al año anterior",
+  "myStatsConsistency": "Constancia lectora",
+  "myStatsCurrentDayStreak": "Racha diaria actual",
+  "myStatsFinishedBookPages": "Páginas de libros terminados",
+  "myStatsFormatAudiobook": "Audiolibro",
+  "myStatsFormatEbook": "Ebook",
+  "myStatsFormatOther": "Otro",
+  "myStatsFormatPhysical": "Papel",
+  "myStatsFormats": "Formatos",
+  "myStatsGenreAffinity": "Afinidad por género",
+  "myStatsHighRatings": "Valorados con 4 estrellas o más",
+  "myStatsLibraryMix": "Composición de la biblioteca",
+  "myStatsLoggedPages": "Páginas leídas",
+  "myStatsRatingDistribution": "Distribución de valoraciones",
+  "myStatsRepeatAuthors": "Autores repetidos",
+  "myStatsThisYear": "Este año",
+  "myStatsUnitDays": "días",
+  "myStatsYearEvolution": "Evolución anual",
+  "quoteVoiceTryAgain": "No se pudo iniciar el dictado por voz. Inténtalo de nuevo.",
+  "annotationBodyTooLong": "Esta anotación debe tener como máximo {maxLength} caracteres.",
+  "@annotationBodyTooLong": {
+    "placeholders": {
+      "maxLength": {
+        "type": "int"
+      }
+    }
+  },
+  "metaPublicationDate": "Fecha de publicación",
+  "customFieldsTitle": "Campos personalizados",
+  "customFieldsEmpty": "Todavía no hay campos personalizados",
+  "customFieldsAdd": "Añadir campo",
+  "customFieldsEdit": "Editar campo",
+  "customFieldsName": "Nombre del campo",
+  "customFieldsType": "Tipo de campo",
+  "customFieldsDeleteTitle": "¿Eliminar el campo personalizado?",
+  "customFieldsDeleteMessage": "Los libros que usan este campo conservarán sus valores hasta que confirmes la eliminación permanente.",
+  "customFieldsDeleteValuesTitle": "¿Eliminar el campo y sus valores?",
+  "customFieldsDeleteValuesMessage": "Esto elimina permanentemente este campo y sus valores de todos los libros.",
+  "customFieldsManage": "Gestionar campos",
+  "customFieldsOption": "Opción",
+  "customFieldsAddOption": "Añadir opción",
+  "customFieldsYes": "Sí",
+  "customFieldsNo": "No",
+  "customFieldsIcon": "Icono",
+  "customFieldsDeleteOptionTitle": "¿Eliminar la opción?",
+  "customFieldsDeleteOptionMessage": "Los libros que usan esta opción perderán el valor del campo personalizado.",
+  "customFieldsTextMode": "Estilo de texto",
+  "customFieldsSingleLine": "Una línea",
+  "customFieldsMultiline": "Varias líneas",
+  "customFieldsShowTime": "Mostrar hora",
+  "customFieldsShowTimeHint": "Incluye la hora al editar y mostrar este campo. Activado por defecto.",
+  "customFieldsUnavailable": "No se pudieron cargar los campos personalizados. Aun así puedes guardar los demás detalles del libro.",
+  "customFieldsSaved": "Campo personalizado guardado.",
+  "customFieldsDeleted": "Campo personalizado eliminado.",
+  "customFieldsTypeText": "Texto",
+  "customFieldsTypeNumber": "Número",
+  "customFieldsTypeDateTime": "Fecha y hora",
+  "customFieldsTypeBoolean": "Sí o no",
+  "customFieldsOptions": "Opciones",
+  "customFieldsTypeSingleSelect": "Selector simple",
+  "customFieldsStandard": "Estándar",
+  "customFieldsShowField": "Mostrar campo",
+  "customFieldsHideField": "Ocultar campo",
+  "profileThemes": "Temas",
+  "themesTitle": "Temas",
+  "themesIntro": "Elige un estilo visual completo. El brillo sigue siendo independiente.",
+  "themeOriginal": "Original",
+  "themeJade": "Jade",
+  "themeCelestial": "Celestial",
+  "themeOcean": "Océano",
+  "themeNoir": "Noir",
+  "themeSapphire": "Sapphire",
+  "themeVelvet": "Velvet",
+  "themeAurora": "Aurora",
+  "themeArcade": "Arcade",
+  "themePop": "Pop",
+  "themeEthereal": "Etéreo",
+  "themeStormbound": "Tormenta",
+  "themeEvercourt": "Cortes",
+  "themeNeonMoon": "Neón",
+  "themeTrail": "Rastro",
+  "themeSerpents": "Serpientes",
+  "themeThornCrown": "Espina",
+  "themeIridescent": "Prisma",
+  "themeLastLight": "Sol",
+  "premiumThemesEntryTitle": "Temas Premium",
+  "premiumThemesTitle": "Temas Premium",
+  "premiumThemesHeroTitle": "Colección de temas animados",
+  "premiumCoverAtmosphereTitle": "Atmósfera de portada",
+  "premiumCoverAtmosphereHint": "Usa localmente los colores de la portada en detalles cinematográficos y celebraciones.",
+  "premiumCoverAtmosphereSaveError": "No se pudo guardar la preferencia de atmósfera de portada.",
+  "premiumThemeUnavailable": "Este tema Premium no está disponible en esta instalación.",
+  "themeApplied": "Tema aplicado.",
+  "themeSaveError": "No se pudo guardar el tema.",
+  "themeWidgetSyncWarning": "Tema aplicado, pero no se pudieron actualizar los widgets.",
+  "readingChapterTitle": "Tu capítulo lector",
+  "readingChapterProfileSubtitle": "Revive el mes y el año en que tus lecturas se convirtieron en historia.",
+  "readingChapterProfileLatest": "Último: {period}",
+  "@readingChapterProfileLatest": {
+    "placeholders": {
+      "period": {
+        "type": "String"
+      }
+    }
+  },
+  "readingChapterNew": "NUEVO",
+  "readingChapterHeroTitle": "Toda vida lectora deja una forma",
+  "readingChapterHeroBody": "Tus meses y años terminados, reconstruidos desde los libros que realmente tocaste.",
+  "readingChapterNewAvailable": "Hay un capítulo nuevo listo",
+  "readingChapterAll": "Todo",
+  "readingChapterMonths": "Meses",
+  "readingChapterYears": "Años",
+  "readingChapterArchiveTitle": "Archivo de capítulos",
+  "readingChapterArchiveWorks": "{count, plural, one{1 obra} other{{count} obras}}",
+  "@readingChapterArchiveWorks": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "readingChapterArchiveEmptyTitle": "{kind, select, all{Un mes o año terminado con lectura crea tu capítulo} month{Un mes terminado con lectura crea tu capítulo} year{Un año terminado con lectura crea tu capítulo} other{Un mes o año terminado con lectura crea tu capítulo}}",
+  "@readingChapterArchiveEmptyTitle": {
+    "placeholders": {
+      "kind": {
+        "type": "String"
+      }
+    }
+  },
+  "readingChapterOpeningTitle": "Capítulo de apertura",
+  "readingChapterOpeningMonth": "TU {period} ENTRE LIBROS",
+  "@readingChapterOpeningMonth": {
+    "placeholders": {
+      "period": {
+        "type": "String"
+      }
+    }
+  },
+  "readingChapterOpeningYear": "TU {period} ENTRE LIBROS",
+  "@readingChapterOpeningYear": {
+    "placeholders": {
+      "period": {
+        "type": "String"
+      }
+    }
+  },
+  "readingChapterOpeningBody": "{count, plural, one{Un libro dio forma a este capítulo.} other{{count} libros dieron forma a este capítulo.}}",
+  "@readingChapterOpeningBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "readingChapterTotalsTitle": "Los números detrás de las páginas",
+  "readingChapterUniqueWorks": "obras únicas",
+  "readingChapterOccurrences": "lecturas terminadas",
+  "readingChapterPages": "páginas en total",
+  "readingChapterPageCoverage": "Recuento de páginas en {known} de {total} libros",
+  "@readingChapterPageCoverage": {
+    "placeholders": {
+      "known": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "readingChapterRhythmTitle": "Lectura por periodo",
+  "readingChapterRhythmBody": "La lectura de este capítulo, repartida en el tiempo.",
+  "readingChapterComparisonTitle": "Respecto al anterior",
+  "readingChapterJourneyTitle": "Caminos distintos",
+  "readingChapterJourneyBody": "Los comienzos, las pausas y los libros sin terminar también forman parte de la historia.",
+  "readingChapterStarted": "Empezados",
+  "readingChapterOngoing": "Aún leyendo",
+  "readingChapterAbandoned": "Sin terminar",
+  "readingChapterFormatsTitle": "Cómo llegaron las historias hasta ti",
+  "readingChapterTasteTitle": "Géneros y autores",
+  "readingChapterGenres": "Géneros",
+  "readingChapterAuthors": "Autores",
+  "readingChapterRatingsTitle": "Los que se quedaron",
+  "readingChapterAverageRating": "valoración privada media",
+  "readingChapterArchetypeTitle": "Tu arquetipo lector",
+  "readingChapterArchetypeBody": "Un año lector con ritmo propio.",
+  "readingChapterArchetypeKeeper": "El Guardián",
+  "readingChapterArchetypeCurator": "El Catador",
+  "readingChapterArchetypeHearth": "El Hogar",
+  "readingChapterArchetypeSpark": "La Chispa",
+  "readingChapterArchetypeCartographer": "El Cartógrafo",
+  "readingChapterArchetypeConstellation": "La Constelación",
+  "readingChapterArchetypeComet": "El Cometa",
+  "readingChapterArchetypeVault": "El Archivo",
+  "readingChapterArchetypeScholar": "El Erudito",
+  "readingChapterArchetypeOak": "El Roble",
+  "readingChapterArchetypeForge": "La Forja",
+  "readingChapterArchetypeBeacon": "El Faro",
+  "readingChapterArchetypeAtlas": "El Atlas",
+  "readingChapterArchetypeNebula": "La Nebulosa",
+  "readingChapterArchetypeLeviathan": "El Leviatán",
+  "readingChapterArchetypeKeeperBody": "Terminas lo que empiezas y vuelves a las estanterías en las que ya confías.",
+  "readingChapterArchetypeCuratorBody": "Tu gusto está claro, pero en la lista siempre queda sitio para probar otros estilos.",
+  "readingChapterArchetypeHearthBody": "Lees en rachas conocidas, a menudo volviendo a los mismos autores y tonos.",
+  "readingChapterArchetypeSparkBody": "Leías poco… hasta que algo nuevo te enciende y no paras.",
+  "readingChapterArchetypeCartographerBody": "Lees de todo con regularidad, siempre con un ojo puesto en lo siguiente distinto.",
+  "readingChapterArchetypeConstellationBody": "Muchos libros, meses irregulares y sagas que te enganchan.",
+  "readingChapterArchetypeCometBody": "Cuando lees, lees de verdad… y casi siempre es algo distinto a lo de antes.",
+  "readingChapterArchetypeVaultBody": "Libros largos, estanterías conocidas y la tentación de quedarte donde ya encajas.",
+  "readingChapterArchetypeScholarBody": "Tu gusto está claro, pero en lecturas largas siempre queda sitio para probar otros estilos.",
+  "readingChapterArchetypeOakBody": "Libros largos y viejos favoritos, en tramos lentos y densos a lo largo del año.",
+  "readingChapterArchetypeForgeBody": "Leías poco… hasta que un libro largo te enciende y no paras.",
+  "readingChapterArchetypeBeaconBody": "Lees con regularidad a través de géneros, y vuelves a autores de confianza.",
+  "readingChapterArchetypeAtlasBody": "Lees de todo con regularidad, en libros largos, siempre con un ojo puesto en lo siguiente distinto.",
+  "readingChapterArchetypeNebulaBody": "Libros largos, meses irregulares y sagas que te enganchan.",
+  "readingChapterArchetypeLeviathanBody": "Cuando lees, lees de verdad… en lecturas densas, y casi siempre es algo distinto a lo de antes.",
+  "readingChapterAxisAnchored": "arraigado",
+  "readingChapterAxisWide": "amplio",
+  "readingChapterAxisSteady": "constante",
+  "readingChapterAxisTidal": "por mareas",
+  "readingChapterAxisExplore": "explorar",
+  "readingChapterAxisSwift": "breves",
+  "readingChapterAxisTome": "densas",
+  "readingChapterAxisReturn": "volver",
+  "readingChapterReflectionTitle": "Un libro que merece ser recordado",
+  "readingChapterSummaryTitle": "Este fue tu capítulo",
+  "readingChapterPromptFavorite": "Libro favorito",
+  "readingChapterPromptSurprise": "Mayor sorpresa",
+  "readingChapterPromptComfort": "Lectura refugio",
+  "readingChapterPromptChallenged": "Libro que me desafió",
+  "readingChapterPromptBestCover": "Mejor portada",
+  "readingChapterPromptPassage": "Pasaje memorable",
+  "readingChapterPromptReturn": "Regreso favorito",
+  "readingChapterPromptUnfinished": "Inacabado pero inolvidable",
+  "readingChapterHighlightsTitle": "Tus destacados",
+  "readingChapterHighlightsAnnualBody": "Elige exactamente tres propuestas o déjalas todas vacías. Permanecen en tu capítulo hasta que las incluyas al compartir.",
+  "readingChapterHighlightsMonthBody": "Elige un favorito del mes o déjalo vacío. Permanece en tu capítulo hasta que lo incluyas al compartir.",
+  "readingChapterPickExactlyThree": "Elige exactamente tres destacados o bórralos todos.",
+  "readingChapterPickOne": "Un capítulo mensual puede tener un destacado.",
+  "readingChapterChooseBook": "Elige un libro de este capítulo",
+  "readingChapterExcerptOptional": "Fragmento o nota breve (opcional)",
+  "readingChapterAttributionOptional": "Fuente de la cita (opcional)",
+  "readingChapterSafeToReveal": "Sin spoilers",
+  "readingChapterSafeToRevealBody": "Seguro para mostrar al compartir",
+  "readingChapterHighlightsSaved": "Destacados guardados",
+  "readingChapterReadinessBanner": "{count, plural, one{1 detalle podría enriquecer este capítulo} other{{count} detalles podrían enriquecer este capítulo}}",
+  "@readingChapterReadinessBanner": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "readingChapterReadinessTitle": "Enriquece este capítulo",
+  "readingChapterReadinessBody": "Son sugerencias, nunca bloqueos. Los datos que faltan se muestran con honestidad.",
+  "readingChapterReadinessUnconfirmedDate": "Confirma la fecha de finalización",
+  "readingChapterReadinessMissingPages": "Añade el número de páginas",
+  "readingChapterReadinessMissingFormat": "Añade el formato de lectura",
+  "readingChapterReadinessMissingGenres": "Añade géneros",
+  "readingChapterReadinessMissingCover": "Añade una portada",
+  "readingChapterReadinessGrouping": "Este libro se ha leído más de una vez. Comprueba si esas copias deben contar como el mismo.",
+  "readingChapterReadinessInvalidPick": "Revisa un destacado que ya no coincide",
+  "readingChapterPreviousCard": "Tarjeta anterior",
+  "readingChapterNextCard": "Tarjeta siguiente",
+  "readingChapterEmptyTitle": "Este capítulo aún no tiene actividad lectora",
+  "readingChapterEmptyBody": "Solo los periodos cerrados y terminados se convierten en historias. Los finales planificados nunca cuentan.",
+  "readingChapterShareTitle": "Comparte este capítulo",
+  "readingChapterSharePrivacyBody": "Nada se comparte hasta que pulses Compartir. Oculta cualquier libro o tarjeta.",
+  "readingChapterIncludedBooks": "Libros incluidos",
+  "readingChapterIncludedCards": "Tarjetas incluidas",
+  "readingChapterIncludeExcerpt": "Incluir mi fragmento",
+  "readingChapterIncludeExcerptBody": "Este texto lo has escrito tú. Revísalo con cuidado antes de compartirlo.",
+  "readingChapterShareLocalText": "{period}\n{books}",
+  "@readingChapterShareLocalText": {
+    "placeholders": {
+      "period": {
+        "type": "String"
+      },
+      "books": {
+        "type": "String"
+      }
+    }
+  },
+  "readingChapterSpoilerHiddenPreview": "El texto con spoilers permanece oculto en las vistas previas hasta que quien lo vea decida mostrarlo.",
+  "readingChapterWeekShort": "Semana {number}",
+  "@readingChapterWeekShort": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "readingChapterNotificationsTitle": "Nuevos capítulos de lectura",
+  "readingChapterNotificationsBody": "Avísame cuando esté listo mi último resumen lector mensual o anual.",
+  "readingChapterNotificationsSaved": "Notificaciones de capítulos de lectura actualizadas",
+  "statusHistoryConfirmDate": "Confirmar fecha de finalización",
+  "statusHistoryDateUnconfirmed": "Esta fecha se ha inferido. Confírmala o corrígela antes de que cuente en las estadísticas por fecha.",
+  "migrationBannerBodyP1Before": "Lamentándolo mucho hemos decidido dejar de mantener online Readendar, apagaremos servidores el ",
+  "migrationBannerBodyP1After": ".",
+  "migrationBannerBodyP2Before": "La aplicación ",
+  "migrationBannerBodyP2EmphasisFunction": "seguirá funcionando",
+  "migrationBannerBodyP2MidPrivacy": " manteniendo todos tus datos de forma ",
+  "migrationBannerBodyP2EmphasisPrivacy": "privada y offline",
+  "migrationBannerBodyP2MidRepo": " en tu dispositivo, además hemos decidido liberar su código haciéndola Open Source con licencia Apache 2.0, puedes acceder al repositorio ",
+  "migrationBannerBodyP2LinkLabel": "aquí",
+  "migrationBannerBodyP2After": " y colaborar con nosotros.",
+  "migrationBannerBodyP3Before": "En este teléfono seguirás teniendo tu ",
+  "migrationBannerBodyP3Emphasis": "biblioteca, calendario, progreso y anotaciones",
+  "migrationBannerBodyP3After": " como hasta ahora, simplemente tendrás que descargar los datos con el botón de más abajo.",
+  "migrationBannerHide": "No volver a mostrar",
+  "migrationBannerImport": "Descargar mis datos",
+  "migrationBannerContinue": "Ahora no",
+  "migrationHomeRowTitle": "Descarga tu biblioteca antes del cierre",
+  "migrationHomeRowBody": "Los servidores de Readendar se apagarán el {date}. Importa tus datos a este dispositivo para seguir funcionando sin conexión.",
+  "@migrationHomeRowBody": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "migrationImportSuccess": "Biblioteca copiada a este dispositivo",
+  "migrationImportFailure": "No se pudo importar. Inténtalo de nuevo.",
+  "migrationImportPersisting": "Guardando tu biblioteca en el dispositivo…",
+  "migrationImportCovers": "Descargando portadas…",
+  "migrationImportCoversProgress": "Portadas {done} de {total}",
+  "@migrationImportCoversProgress": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "profileExportPreparing": "Preparando archivo…",
+  "profileExportSharing": "Abriendo opciones para guardar…",
+  "settingsRestoreServer": "Restaurar desde el servidor",
+  "settingsRestoreZip": "Restaurar copia local",
+  "settingsRestoreZipHint": "Elige el .zip o .json que descargaste con «Descargar mis datos».",
+  "settingsImportLocal": "Importar biblioteca a este dispositivo",
+  "settingsImportLocalHint": "Copia tu biblioteca a este teléfono. El servidor se apaga después; esta es la vía si ocultaste el aviso.",
+  "settingsRestoreZipDone": "Copia restaurada.",
+  "settingsWipeLocal": "Borrar datos de este dispositivo",
+  "settingsWipeLocalConfirm": "Se borrarán todos los datos de la app en este dispositivo. No hay marcha atrás."
+}

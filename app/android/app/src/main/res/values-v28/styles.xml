@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LaunchTheme" parent="LaunchTheme.Base">
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarDividerColor">#FFFAF5EF</item>
+    </style>
+    <style name="NormalTheme" parent="NormalTheme.Base">
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarDividerColor">#FFFAF5EF</item>
+    </style>
+</resources>
