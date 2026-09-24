@@ -63,7 +63,7 @@ dependencies:
   text_sight: ^0.1.1
   speech_to_text: ^7.0.0
   # OS quick action (long-press app icon → "Nueva cita" → composer deep link).
-  quick_actions: ^1.1.0
+  quick_actions: ^1.1.1
 
   # System UX
   connectivity_plus: ^7.2.0
