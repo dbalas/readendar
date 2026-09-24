@@ -27,7 +27,7 @@ dependencies:
   shared_preferences: ^2.3.3
   path_provider: ^2.1.5
   path: ^1.9.1
-  sqflite: ^2.4.2
+  sqflite: ^2.4.4
 
   # Deep linking
   app_links: ^7.2.1
