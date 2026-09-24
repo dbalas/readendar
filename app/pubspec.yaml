@@ -110,7 +110,7 @@ dependencies:
   archive: ^3.6.1
 
 dev_dependencies:
-  flutter_local_notifications_platform_interface: ^12.0.0
+  flutter_local_notifications_platform_interface: ^12.2.0
   flutter_test:
     sdk: flutter
   integration_test:
