@@ -17,7 +17,17 @@ import 'package:readendar/features/library/book_detail_screen.dart';
 import 'package:readendar/features/reading_chapter/reading_chapter_stage.dart';
 import 'package:readendar/features/reading_chapter/reading_chapter_story_screen.dart';
 
+import '../../helpers/infra_overrides.dart';
+
+late TestInfra testInfra;
+
 void main() {
+  setUp(() async {
+    testInfra = await TestInfra.create(prefix: 'reading-chapter-story');
+  });
+
+  tearDown(() => testInfra.dispose());
+
   testWidgets('story cards page by swipe physics without next-card buttons', (
     tester,
   ) async {
@@ -241,7 +251,7 @@ void main() {
     const request = ReadingChapterRequest(ReadingChapterKind.month, '2026-07');
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: testInfra.combine([
           readingChapterRepoProvider.overrideWithValue(_StoryRepository()),
           readingChapterStoryProvider.overrideWith(
             (ref, _) async* {
@@ -260,7 +270,7 @@ void main() {
               ),
             ),
           ),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -289,7 +299,7 @@ Future<void> _pumpStory(
   const request = ReadingChapterRequest(ReadingChapterKind.month, '2026-07');
   await tester.pumpWidget(
     ProviderScope(
-      overrides: [
+      overrides: testInfra.combine([
         readingChapterRepoProvider.overrideWithValue(_StoryRepository()),
         readingChapterStoryProvider.overrideWith(
           (ref, _) => Stream.value(story),
@@ -307,7 +317,7 @@ Future<void> _pumpStory(
           ),
         ),
         ...extraOverrides,
-      ],
+      ]),
       child: MaterialApp(
         locale: const Locale('es'),
         theme: buildLightTheme(),

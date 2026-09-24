@@ -26,6 +26,11 @@ import 'package:readendar/features/library/rating_sheet.dart';
 import 'package:readendar/features/search/search_empty_art.dart';
 import 'package:readendar/features/search/search_screen.dart';
 import '../../helpers/api_repo_stubs.dart';
+import '../../helpers/infra_overrides.dart';
+
+late TestInfra testInfra;
+
+List<Override> searchInfra(List<Override> more) => testInfra.combine(more);
 
 class _FakeSearchRepo extends Fake implements SearchRepository {
   String? lastQuery;
@@ -339,7 +344,7 @@ Future<void> _pumpForm(
   addTearDown(tester.view.resetDevicePixelRatio);
   await tester.pumpWidget(
     ProviderScope(
-      overrides: [
+      overrides: searchInfra([
         bookRepoProvider.overrideWithValue(bookRepo),
         progressRepoProvider.overrideWithValue(
           progressRepo ?? _FakeProgressRepo(),
@@ -347,7 +352,7 @@ Future<void> _pumpForm(
         customFieldRepoProvider.overrideWithValue(
           customFieldRepo ?? _FakeCustomFieldRepo(definitions: const []),
         ),
-      ],
+      ]),
       child: MaterialApp(
         locale: const Locale('es'),
         theme: buildLightTheme(),
@@ -381,10 +386,10 @@ Future<void> _pump(
 ) async {
   await tester.pumpWidget(
     ProviderScope(
-      overrides: [
+      overrides: searchInfra([
         searchRepoProvider.overrideWithValue(repo),
         booksProvider.overrideWith((ref) async => const <Book>[]),
-      ],
+      ]),
       child: MaterialApp(
         locale: const Locale('es'),
         theme: buildLightTheme(),
@@ -421,7 +426,7 @@ Future<void> _pumpAddFromSearch(
   final bookRepo = _FakeBookRepo(created);
   await tester.pumpWidget(
     ProviderScope(
-      overrides: [
+      overrides: searchInfra([
         searchRepoProvider.overrideWithValue(searchRepo),
         bookRepoProvider.overrideWithValue(bookRepo),
         booksProvider.overrideWith((ref) async => [...bookRepo.createdBooks]),
@@ -432,7 +437,7 @@ Future<void> _pumpAddFromSearch(
         upcomingEventsProvider.overrideWith(
           (ref) async => const <ReadingEvent>[],
         ),
-      ],
+      ]),
       child: MaterialApp(
         locale: const Locale('es'),
         theme: buildLightTheme(),
@@ -494,6 +499,12 @@ Future<void> _pumpAddFromSearch(
 }
 
 void main() {
+  setUp(() async {
+    testInfra = await TestInfra.create(prefix: 'search-screen');
+  });
+
+  tearDown(() => testInfra.dispose());
+
   test('custom decimal input uses API canonical separator', () {
     expect(normalizeCustomFieldDecimal('1,25', const Locale('es')), '1.25');
     expect(normalizeCustomFieldDecimal('-1.25', const Locale('en')), '-1.25');
@@ -566,10 +577,10 @@ void main() {
       ];
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           searchRepoProvider.overrideWithValue(repo),
           booksProvider.overrideWith((ref) async => const <Book>[]),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -601,13 +612,13 @@ void main() {
       );
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           searchRepoProvider.overrideWithValue(repo),
           booksProvider.overrideWith((ref) async => const <Book>[]),
           customFieldRepoProvider.overrideWithValue(
             _FakeCustomFieldRepo(definitions: const []),
           ),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -639,7 +650,7 @@ void main() {
         ];
       await tester.pumpWidget(
         ProviderScope(
-          overrides: [
+          overrides: searchInfra([
             searchRepoProvider.overrideWithValue(repo),
             booksProvider.overrideWith(
               (ref) async => [
@@ -654,7 +665,7 @@ void main() {
                 ),
               ],
             ),
-          ],
+          ]),
           child: MaterialApp(
             locale: const Locale('es'),
             theme: buildLightTheme(),
@@ -691,7 +702,7 @@ void main() {
       ];
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           searchRepoProvider.overrideWithValue(repo),
           booksProvider.overrideWith(
             (ref) async => [
@@ -706,7 +717,7 @@ void main() {
               ),
             ],
           ),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -741,7 +752,7 @@ void main() {
       ];
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           searchRepoProvider.overrideWithValue(repo),
           booksProvider.overrideWith(
             (ref) async => [
@@ -755,7 +766,7 @@ void main() {
               ),
             ],
           ),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -812,7 +823,7 @@ void main() {
       ];
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           searchRepoProvider.overrideWithValue(searchRepo),
           booksProvider.overrideWith((ref) async => const <Book>[]),
           bookRepoProvider.overrideWithValue(_FakeBookRepo(created)),
@@ -823,7 +834,7 @@ void main() {
           upcomingEventsProvider.overrideWith(
             (ref) async => const <ReadingEvent>[],
           ),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -875,13 +886,13 @@ void main() {
         );
       await tester.pumpWidget(
         ProviderScope(
-          overrides: [
+          overrides: searchInfra([
             searchRepoProvider.overrideWithValue(repo),
             booksProvider.overrideWith((ref) async => const <Book>[]),
             customFieldRepoProvider.overrideWithValue(
               _FakeCustomFieldRepo(definitions: const []),
             ),
-          ],
+          ]),
           child: MaterialApp(
             locale: const Locale('es'),
             theme: buildLightTheme(),
@@ -910,13 +921,13 @@ void main() {
       );
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           searchRepoProvider.overrideWithValue(repo),
           booksProvider.overrideWith((ref) async => const <Book>[]),
           customFieldRepoProvider.overrideWithValue(
             _FakeCustomFieldRepo(definitions: const []),
           ),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -946,13 +957,13 @@ void main() {
         );
       await tester.pumpWidget(
         ProviderScope(
-          overrides: [
+          overrides: searchInfra([
             searchRepoProvider.overrideWithValue(repo),
             booksProvider.overrideWith((ref) async => const <Book>[]),
             customFieldRepoProvider.overrideWithValue(
               _FakeCustomFieldRepo(definitions: const []),
             ),
-          ],
+          ]),
           child: MaterialApp(
             locale: const Locale('es'),
             theme: buildLightTheme(),
@@ -989,10 +1000,10 @@ void main() {
     final repo = _FakeSearchRepo();
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           searchRepoProvider.overrideWithValue(repo),
           booksProvider.overrideWith((ref) async => const <Book>[]),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -1017,10 +1028,10 @@ void main() {
     final repo = _FakeSearchRepo();
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           searchRepoProvider.overrideWithValue(repo),
           booksProvider.overrideWith((ref) async => const <Book>[]),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -1072,10 +1083,10 @@ void main() {
 
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           searchRepoProvider.overrideWithValue(repo),
           booksProvider.overrideWith((ref) async => const <Book>[]),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -1104,10 +1115,10 @@ void main() {
     final repo = _FakeSearchRepo();
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           searchRepoProvider.overrideWithValue(repo),
           booksProvider.overrideWith((ref) async => const <Book>[]),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -1270,7 +1281,7 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           bookRepoProvider.overrideWithValue(_FakeBookRepo(book)),
           progressRepoProvider.overrideWithValue(
             _FakeProgressRepo(
@@ -1281,7 +1292,7 @@ void main() {
           customFieldRepoProvider.overrideWithValue(
             _FakeCustomFieldRepo(definitions: const []),
           ),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -1325,7 +1336,7 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           bookRepoProvider.overrideWithValue(
             _FakeBookRepo(
               Book(
@@ -1342,7 +1353,7 @@ void main() {
           customFieldRepoProvider.overrideWithValue(
             _FakeCustomFieldRepo(definitions: const []),
           ),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -1568,7 +1579,7 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           bookRepoProvider.overrideWithValue(repo),
           progressRepoProvider.overrideWithValue(_FakeProgressRepo()),
           customFieldRepoProvider.overrideWithValue(
@@ -1584,7 +1595,7 @@ void main() {
               ],
             ),
           ),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -1625,7 +1636,7 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           bookRepoProvider.overrideWithValue(
             _FakeBookRepo(
               Book(
@@ -1652,7 +1663,7 @@ void main() {
               ],
             ),
           ),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -1685,7 +1696,7 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           bookRepoProvider.overrideWithValue(
             _FakeBookRepo(
               Book(
@@ -1712,7 +1723,7 @@ void main() {
               ],
             ),
           ),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -1863,10 +1874,10 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           bookRepoProvider.overrideWithValue(repo),
           progressRepoProvider.overrideWithValue(_FakeProgressRepo()),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -1912,10 +1923,10 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           bookRepoProvider.overrideWithValue(repo),
           progressRepoProvider.overrideWithValue(_FakeProgressRepo()),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -1952,7 +1963,7 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           bookRepoProvider.overrideWithValue(
             _FakeBookRepo(
               Book(
@@ -1966,7 +1977,7 @@ void main() {
             ),
           ),
           progressRepoProvider.overrideWithValue(_FakeProgressRepo()),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -2014,11 +2025,11 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           bookRepoProvider.overrideWithValue(bookRepo),
           progressRepoProvider.overrideWithValue(_FakeProgressRepo()),
           uploadRepoProvider.overrideWithValue(uploadRepo),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -2088,11 +2099,11 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           bookRepoProvider.overrideWithValue(bookRepo),
           progressRepoProvider.overrideWithValue(_FakeProgressRepo()),
           uploadRepoProvider.overrideWithValue(uploadRepo),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -2147,11 +2158,11 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: searchInfra([
           bookRepoProvider.overrideWithValue(bookRepo),
           progressRepoProvider.overrideWithValue(_FakeProgressRepo()),
           uploadRepoProvider.overrideWithValue(uploadRepo),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),

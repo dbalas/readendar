@@ -17,7 +17,7 @@ import 'package:readendar/core/widgets/rd_circular_progress.dart';
 import 'package:readendar/core/widgets/rd_section_tabs.dart';
 import 'package:readendar/di/providers.dart';
 import 'package:readendar/features/library/book_detail_screen.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import '../../helpers/infra_overrides.dart';
 
 
 Book _personalBook() => Book(
@@ -52,10 +52,10 @@ class _FakeSecureTokenStorage extends SecureTokenStorage {
 
 List<Override> _ownedOverrides(
   Book book, {
-  required SharedPreferences prefs,
+  required TestInfra infra,
   List<Book> library = const [],
 }) => [
-  sharedPreferencesProvider.overrideWithValue(prefs),
+  ...infra.baseOverrides,
   dataPlaneProvider.overrideWith((ref) => DataPlane.api),
   bookProvider(book.id).overrideWith((ref) async => book),
   eventsForBookProvider(
@@ -101,32 +101,34 @@ void _trapOverflows(WidgetTester tester) {
 }
 
 void main() {
-  late SharedPreferences prefs;
+  late TestInfra infra;
 
   setUp(() async {
-    SharedPreferences.setMockInitialValues({});
-    prefs = await SharedPreferences.getInstance();
+    infra = await TestInfra.create(prefix: 'book-detail-paint');
   });
+
+  tearDown(() => infra.dispose());
 
   group('BookDetailScreen paints correctly per scope', () {
     testWidgets('premium theme adds cinematic depth to the book header', (
       tester,
     ) async {
       final book = _personalBook();
-      SharedPreferences.setMockInitialValues({
-        'premium_cover_atmosphere': true,
-      });
-      final preferences = await SharedPreferences.getInstance();
+      final premiumInfra = await TestInfra.create(
+        prefix: 'book-detail-paint-premium',
+        preferenceValues: {'premium_cover_atmosphere': true},
+      );
       await tester.pumpWidget(
         _wrap(
           BookDetailScreen(bookId: book.id),
           overrides: [
-            ..._ownedOverrides(book, prefs: preferences),
+            ..._ownedOverrides(book, infra: premiumInfra),
           ],
           theme: buildLightTheme(themeId: ReadendarThemeId.ethereal),
         ),
       );
       await tester.pumpAndSettle();
+      premiumInfra.dispose();
 
       expect(find.byKey(const Key('premiumBookAtmosphere')), findsOneWidget);
       expect(
@@ -143,7 +145,7 @@ void main() {
       await tester.pumpWidget(
         _wrap(
           BookDetailScreen(bookId: book.id),
-          overrides: _ownedOverrides(book, prefs: prefs),
+          overrides: _ownedOverrides(book, infra: infra),
         ),
       );
       await tester.pumpAndSettle();
@@ -181,7 +183,7 @@ void main() {
       await tester.pumpWidget(
         _wrap(
           BookDetailScreen(bookId: book.id),
-          overrides: _ownedOverrides(book, prefs: prefs),
+          overrides: _ownedOverrides(book, infra: infra),
           theme: buildDarkTheme(),
         ),
       );

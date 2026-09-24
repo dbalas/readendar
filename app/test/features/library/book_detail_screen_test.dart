@@ -32,8 +32,17 @@ import 'package:readendar/features/library/book_field_cards.dart';
 import 'package:readendar/features/library/rating_sheet.dart';
 import 'package:readendar/features/search/search_screen.dart';
 import '../../helpers/api_repo_stubs.dart';
+import '../../helpers/infra_overrides.dart';
+
+late TestInfra testInfra;
 
 void main() {
+  setUp(() async {
+    testInfra = await TestInfra.create(prefix: 'book-detail-screen');
+  });
+
+  tearDown(() => testInfra.dispose());
+
   testWidgets('re-read action explains and waits for confirmation', (
     tester,
   ) async {
@@ -49,7 +58,7 @@ void main() {
 
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: testInfra.combine([
           bookProvider(book.id).overrideWith((ref) async => book),
           eventsForBookProvider(
             book.id,
@@ -59,7 +68,7 @@ void main() {
             book.id,
           ).overrideWith((ref) async => Progress(bookEntryId: book.id)),
           bookRepoProvider.overrideWithValue(repo),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -935,7 +944,7 @@ void main() {
 
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: testInfra.combine([
           bookProvider(book.id).overrideWith((ref) async => book),
           eventsForBookProvider(
             book.id,
@@ -958,7 +967,7 @@ void main() {
               ),
             ],
           ),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -1014,7 +1023,7 @@ void main() {
 
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: testInfra.combine([
           bookProvider(book.id).overrideWith((ref) async => book),
           eventsForBookProvider(
             book.id,
@@ -1022,7 +1031,7 @@ void main() {
           booksProvider.overrideWith((ref) async => [book]),
           progressProvider(book.id).overrideWith((ref) async => progress),
           progressRepoProvider.overrideWithValue(progressRepo),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -1081,14 +1090,14 @@ void main() {
 
       await tester.pumpWidget(
         ProviderScope(
-          overrides: [
+          overrides: testInfra.combine([
             bookProvider(book.id).overrideWith((ref) async => book),
             eventsForBookProvider(
               book.id,
             ).overrideWith((ref) => const AsyncValue.data(<ReadingEvent>[])),
             booksProvider.overrideWith((ref) async => [book]),
             progressProvider(book.id).overrideWith((ref) async => progress),
-          ],
+          ]),
           child: MaterialApp(
             locale: const Locale('es'),
             theme: buildLightTheme(),
@@ -1122,7 +1131,7 @@ void main() {
 
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: testInfra.combine([
           bookProvider(book.id).overrideWith((ref) async => book),
           eventsForBookProvider(
             book.id,
@@ -1137,7 +1146,7 @@ void main() {
             ),
           ),
           progressRepoProvider.overrideWithValue(progressRepo),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -1193,7 +1202,7 @@ void main() {
       late ProviderContainer container;
       await tester.pumpWidget(
         ProviderScope(
-          overrides: [
+          overrides: testInfra.combine([
             bookProvider(book.id).overrideWith((ref) async => book),
             eventsForBookProvider(
               book.id,
@@ -1205,7 +1214,7 @@ void main() {
               pending = Completer<Progress>();
               return pending!.future;
             }),
-          ],
+          ]),
           child: Builder(
             builder: (context) {
               container = ProviderScope.containerOf(context);
@@ -1275,14 +1284,14 @@ void main() {
 
       await tester.pumpWidget(
         ProviderScope(
-          overrides: [
+          overrides: testInfra.combine([
             bookProvider(book.id).overrideWith((ref) async => book),
             eventsForBookProvider(
               book.id,
             ).overrideWith((ref) => const AsyncValue.data(<ReadingEvent>[])),
             booksProvider.overrideWith((ref) async => [book]),
             progressProvider(book.id).overrideWith((ref) => pending.future),
-          ],
+          ]),
           child: MaterialApp(
             locale: const Locale('es'),
             theme: buildLightTheme(),
@@ -1346,7 +1355,7 @@ void main() {
 
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: testInfra.combine([
           bookProvider(book.id).overrideWith((ref) async => book),
           eventsForBookProvider(
             book.id,
@@ -1356,7 +1365,7 @@ void main() {
             book.id,
           ).overrideWith((ref) async => Progress(bookEntryId: book.id)),
           progressRepoProvider.overrideWithValue(_FakeProgressRepository()),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -1529,6 +1538,7 @@ List<Override> _personalDetailOverrides(
   List<BookCustomField> customFields = const [],
   List<BookDetailFieldLayoutItem>? customFieldLayout,
 }) => [
+  ...testInfra.baseOverrides,
   // Resolve through the repo so a post-mutation refresh sees the new status
   // (mirrors GET /v1/books/:id returning the committed change).
   bookProvider(book.id).overrideWith((ref) async {
@@ -1916,7 +1926,7 @@ void _statusTests() {
 
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: testInfra.combine([
           bookProvider(book.id).overrideWith((ref) async {
             final r = await repo.get(book.id);
             return r.value!;
@@ -1947,7 +1957,7 @@ void _statusTests() {
           customFieldRepoProvider.overrideWithValue(
             _FakeCustomFieldRepository(const []),
           ),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),

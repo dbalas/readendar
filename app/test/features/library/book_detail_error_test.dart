@@ -11,12 +11,22 @@ import 'package:readendar/core/widgets/error_retry.dart';
 import 'package:readendar/di/providers.dart';
 import 'package:readendar/features/library/book_detail_screen.dart';
 
+import '../../helpers/infra_overrides.dart';
+
 void main() {
+  late TestInfra infra;
+
+  setUp(() async {
+    infra = await TestInfra.create(prefix: 'book-detail-error');
+  });
+
+  tearDown(() => infra.dispose());
+
   testWidgets('book load failure shows ErrorRetry', (tester) async {
     const id = 'book-1';
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: infra.combine([
           bookProvider(id).overrideWith(
             (ref) async => throw const FailureException(NetworkFailure()),
           ),
@@ -27,7 +37,7 @@ void main() {
             (ref) => const AsyncValue.data(<ReadingEvent>[]),
           ),
           booksProvider.overrideWith((ref) async => const <Book>[]),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),
@@ -57,7 +67,7 @@ void main() {
     );
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: infra.combine([
           bookProvider(id).overrideWith((ref) async => book),
           progressProvider(id).overrideWith(
             (ref) async => throw const FailureException(NetworkFailure()),
@@ -66,7 +76,7 @@ void main() {
             (ref) => const AsyncValue.data(<ReadingEvent>[]),
           ),
           booksProvider.overrideWith((ref) async => [book]),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(),

@@ -19,6 +19,9 @@ import 'package:readendar/features/library/book_detail_screen.dart';
 import 'package:readendar/features/library/book_field_cards.dart';
 import 'package:readendar/features/library/rating_sheet.dart';
 import '../../helpers/api_repo_stubs.dart';
+import '../../helpers/infra_overrides.dart';
+
+late TestInfra testInfra;
 
 Book _book({String status = BookStatus.reading, int? pageCount = 120}) => Book(
   id: 'book-1',
@@ -43,7 +46,7 @@ ReadingEvent _event(String type, DateTime date, {String status = 'active'}) =>
     );
 
 Widget _wrap(Widget home, List<Override> overrides) => ProviderScope(
-  overrides: overrides,
+  overrides: testInfra.combine(overrides),
   child: MaterialApp(
     locale: const Locale('es'),
     theme: buildLightTheme(),
@@ -54,18 +57,24 @@ Widget _wrap(Widget home, List<Override> overrides) => ProviderScope(
 );
 
 void main() {
+  setUp(() async {
+    testInfra = await TestInfra.create(prefix: 'celebration-screen');
+  });
+
+  tearDown(() => testInfra.dispose());
+
   testWidgets('premium celebration uses the selected theme identity', (
     tester,
   ) async {
     final book = _book(status: BookStatus.read);
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: testInfra.combine([
           bookEventsHistoryProvider(book.id).overrideWith((ref) async => []),
           progressProvider(
             book.id,
           ).overrideWith((ref) async => Progress(bookEntryId: book.id)),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(themeId: ReadendarThemeId.ethereal),
@@ -95,12 +104,12 @@ void main() {
       final book = _book(status: BookStatus.read);
       await tester.pumpWidget(
         ProviderScope(
-          overrides: [
+          overrides: testInfra.combine([
             bookEventsHistoryProvider(book.id).overrideWith((ref) async => []),
             progressProvider(
               book.id,
             ).overrideWith((ref) async => Progress(bookEntryId: book.id)),
-          ],
+          ]),
           child: MaterialApp(
             locale: const Locale('es'),
             theme: buildLightTheme(themeId: definition.id),
@@ -136,12 +145,12 @@ void main() {
     final book = _book(status: BookStatus.read);
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [
+        overrides: testInfra.combine([
           bookEventsHistoryProvider(book.id).overrideWith((ref) async => []),
           progressProvider(
             book.id,
           ).overrideWith((ref) async => Progress(bookEntryId: book.id)),
-        ],
+        ]),
         child: MaterialApp(
           locale: const Locale('es'),
           theme: buildLightTheme(themeId: ReadendarThemeId.ethereal),
