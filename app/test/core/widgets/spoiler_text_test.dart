@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:readendar/core/widgets/spoiler_text.dart';
 
+import '../../helpers/linux_goldens.dart';
+
 ThemeData _theme(Brightness brightness) => ThemeData(
   brightness: brightness,
   colorScheme: ColorScheme.fromSeed(
@@ -80,9 +82,10 @@ void main() {
   });
 
   for (final brightness in Brightness.values) {
-    testWidgets('inline particle veil matches ${brightness.name} golden', (
-      tester,
-    ) async {
+    testWidgets(
+      'inline particle veil matches ${brightness.name} golden',
+      skip: !runLinuxGoldens,
+      (tester) async {
       tester.view.physicalSize = const Size(420, 280);
       tester.view.devicePixelRatio = 1;
       addTearDown(tester.view.resetPhysicalSize);

@@ -15,6 +15,8 @@ import 'package:readendar/core/widgets/rd_button.dart';
 import 'package:readendar/di/providers.dart';
 import 'package:readendar/features/roulette/book_roulette_screen.dart';
 
+import '../../helpers/linux_goldens.dart';
+
 Book _book(
   String id, {
   String status = BookStatus.pending,
@@ -255,9 +257,10 @@ void main() {
   });
 
   for (final themeMode in [ThemeMode.light, ThemeMode.dark]) {
-    testWidgets('editorial portal matches ${themeMode.name} golden', (
-      tester,
-    ) async {
+    testWidgets(
+      'editorial portal matches ${themeMode.name} golden',
+      skip: !runLinuxGoldens,
+      (tester) async {
       tester.view.physicalSize = const Size(390, 844);
       tester.view.devicePixelRatio = 1;
       addTearDown(tester.view.resetPhysicalSize);
@@ -278,9 +281,10 @@ void main() {
       });
     });
 
-    testWidgets('winner panel matches ${themeMode.name} golden', (
-      tester,
-    ) async {
+    testWidgets(
+      'winner panel matches ${themeMode.name} golden',
+      skip: !runLinuxGoldens,
+      (tester) async {
       tester.view.physicalSize = const Size(390, 844);
       tester.view.devicePixelRatio = 1;
       addTearDown(tester.view.resetPhysicalSize);

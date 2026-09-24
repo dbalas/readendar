@@ -5,11 +5,14 @@ import 'package:readendar/core/theme/light_theme.dart';
 import 'package:readendar/core/theme/theme_catalog.dart';
 import 'package:readendar/core/widgets/theme_preview_card.dart';
 
+import '../../helpers/linux_goldens.dart';
+
 void main() {
   for (final brightness in Brightness.values) {
-    testWidgets('all theme previews match ${brightness.name} golden', (
-      tester,
-    ) async {
+    testWidgets(
+      'all theme previews match ${brightness.name} golden',
+      skip: !runLinuxGoldens,
+      (tester) async {
       tester.view.physicalSize = const Size(820, 760);
       tester.view.devicePixelRatio = 1;
       addTearDown(tester.view.resetPhysicalSize);
@@ -60,9 +63,10 @@ void main() {
   }
 
   for (final brightness in Brightness.values) {
-    testWidgets('Ethereal premium preview matches ${brightness.name} golden', (
-      tester,
-    ) async {
+    testWidgets(
+      'Ethereal premium preview matches ${brightness.name} golden',
+      skip: !runLinuxGoldens,
+      (tester) async {
       tester.view.physicalSize = const Size(420, 176);
       tester.view.devicePixelRatio = 1;
       addTearDown(tester.view.resetPhysicalSize);
@@ -109,9 +113,10 @@ void main() {
   }
 
   for (final brightness in Brightness.values) {
-    testWidgets('all premium previews match ${brightness.name} golden', (
-      tester,
-    ) async {
+    testWidgets(
+      'all premium previews match ${brightness.name} golden',
+      skip: !runLinuxGoldens,
+      (tester) async {
       tester.view.physicalSize = const Size(820, 748);
       tester.view.devicePixelRatio = 1;
       addTearDown(tester.view.resetPhysicalSize);

@@ -280,7 +280,7 @@ void main() {
     );
   });
 
-  test('Android treats a failed refresh with cache as stale, not live', () {
+  test('Android progress refresh is cache-only: OK when cached, ERROR otherwise', () {
     final kotlin = source(
       'android/app/src/main/kotlin/com/readendar/readendar/'
       'ReadendarProgressWidgetProvider.kt',

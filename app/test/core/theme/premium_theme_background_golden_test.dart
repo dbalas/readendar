@@ -5,10 +5,13 @@ import 'package:readendar/core/theme/light_theme.dart';
 import 'package:readendar/core/theme/theme_background.dart';
 import 'package:readendar/core/theme/theme_catalog.dart';
 
+import '../../helpers/linux_goldens.dart';
+
 void main() {
   for (final brightness in Brightness.values) {
     testWidgets(
       'premium backgrounds have dense distinct ${brightness.name} artwork',
+      skip: !runLinuxGoldens,
       (tester) async {
         tester.view.physicalSize = const Size(900, 1180);
         tester.view.devicePixelRatio = 1;

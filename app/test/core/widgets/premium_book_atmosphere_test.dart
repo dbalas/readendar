@@ -8,6 +8,8 @@ import 'package:readendar/core/theme/light_theme.dart';
 import 'package:readendar/core/theme/theme_catalog.dart';
 import 'package:readendar/core/widgets/premium_book_atmosphere.dart';
 
+import '../../helpers/linux_goldens.dart';
+
 void main() {
   testWidgets('Ethereal book atmosphere grows a progress constellation', (
     tester,
@@ -74,6 +76,7 @@ void main() {
   for (final brightness in Brightness.values) {
     testWidgets(
       'Ethereal book atmosphere uses constellation paths in ${brightness.name}',
+      skip: !runLinuxGoldens,
       (tester) async {
         tester.view.physicalSize = const Size(420, 260);
         tester.view.devicePixelRatio = 1;
