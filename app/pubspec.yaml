@@ -97,7 +97,7 @@ dependencies:
   confetti: ^0.8.0
 
   # IDs
-  uuid: ^4.5.1
+  uuid: ^4.6.0
 
   # Utils
   collection: ^1.18.0
