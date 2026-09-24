@@ -102,7 +102,7 @@ dependencies:
   # Utils
   collection: ^1.18.0
   meta: ^1.18.0
-  flutter_quill: ^11.5.0
+  flutter_quill: ^11.6.0
   markdown_quill: ^4.3.0
   markdown: ^7.3.1
   flutter_timezone: ^5.1.0
