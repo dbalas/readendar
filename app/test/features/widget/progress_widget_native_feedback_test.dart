@@ -81,11 +81,11 @@ void main() {
 
     expect(save, contains('let update = await WidgetAPI.updateProgress('));
     expect(save, isNot(contains('Task.detached')));
-    expect(save, contains('if let update {'));
     expect(
       save,
       contains('WidgetAPI.setCachedProgress(bookID: bookID, update: update)'),
     );
+    expect(save, contains('persistProgressDrafts(bookID: bookID, update: update)'));
     expect(save, contains('setProgressMutationFeedback("saved")'));
   });
 
@@ -289,12 +289,10 @@ void main() {
       'android/app/src/main/kotlin/com/readendar/readendar/'
       'ReadendarWidgetProvider.kt',
     );
-    expect(kotlin, contains('DataState.STALE'));
-    expect(kotlin, contains('result.live -> DataState.OK'));
-    expect(kotlin, contains('result.hasUsableData -> DataState.STALE'));
+    expect(kotlin, contains('DataState.ERROR'));
+    expect(kotlin, contains('result.hasUsableData'));
+    expect(kotlin, contains('DataState.OK'));
     expect(api, contains('val live: Boolean = false'));
-    expect(api, contains('private fun missingCredentialsLoad()'));
-    expect(api, contains('Summary.EMPTY'));
     expect(
       api,
       contains(

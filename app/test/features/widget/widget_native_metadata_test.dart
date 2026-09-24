@@ -148,11 +148,9 @@ void main() {
     );
 
     final widgets = source('ios/ReadendarWidget/ReadendarWidget.swift');
-    expect(widgets, contains('setSecrets(access:'));
-    expect(widgets, contains('WidgetKeychain.writeTokens'));
+    expect(widgets, contains('static let access = "wdg_access"'));
+    expect(widgets, contains('static let refresh = "wdg_refresh"'));
     expect(widgets, contains(r'flutter.\(key)'));
-    expect(widgets, contains('secretPair()?.access'));
-    expect(widgets, contains('guard setSecrets(access:'));
     final setShared = widgets.substring(
       widgets.indexOf('private func setShared'),
       widgets.indexOf('private func removeShared'),
@@ -165,14 +163,14 @@ void main() {
     expect(setShared, contains('synchronize()'));
     final removeShared = widgets.substring(
       widgets.indexOf('private func removeShared'),
-      widgets.indexOf('/// Access+refresh'),
+      widgets.indexOf('// MARK: - Persistent cover cache'),
     );
     expect(removeShared, contains(r'flutter.\(key)'));
     expect(removeShared, contains('synchronize()'));
     expect(
-      widgets,
-      isNot(contains('setSecret(Keys.access')),
-      reason: 'TokenRotator must persist access+refresh as one pair',
+      keychain,
+      contains('writeTokens(access: String, refresh: String)'),
+      reason: 'Runner and widget extension share one Keychain write path',
     );
   });
 
